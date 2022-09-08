@@ -2,4 +2,4 @@
 
 void optionestest();
 
-void showOptionesMainMenue(player* player, nodemanager* nodemanager);
+int showOptionesMainMenue(player* player, nodemanager* nodemanager);

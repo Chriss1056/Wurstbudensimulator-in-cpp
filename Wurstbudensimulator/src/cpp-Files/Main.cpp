@@ -106,21 +106,30 @@ int main()
 					case 0:
 					{
 						showBankMainMenue(&player);
+						tick = 1;
 						break;
 					}
 					case 3:
 					{
-						showOptionesMainMenue(&player, &nodemanager);
+						int status = showOptionesMainMenue(&player, &nodemanager);
+						if (status == 1)
+						{
+							terminate = 1;
+						}
+						tick = 1;
 						break;
 					}
 					default:
 					{
 						system("cls");
 						std::cerr << "Something went wrong..." << std::endl;
+						Sleep(5000);
+						key = NULL;
+						tick = 1;
+						system("cls");
 						break;
 					}
 					}
-					tick = 1;
 				}
 			}
 		} while (!tick);
@@ -129,6 +138,7 @@ int main()
 	} while (!terminate);
 	terminate = 0;
 
+	system("cls");
 	system("pause");
 	return 0;
 }

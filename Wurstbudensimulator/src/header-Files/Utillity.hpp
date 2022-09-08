@@ -30,6 +30,20 @@ namespace menue_strings
 		const char* rundenende_main_menue_selected = "| # RUNDENENDE                       # |";
 		const char* rundenende_main_menue_not_selected = "|   rundenende                         |";
 	};
+	struct optiones_menue
+	{
+		const char* optiones_menue_back_selected = "| # BACK     # |";
+		const char* optiones_menue_back_not_selected = "|   back       |";
+
+		const char* optiones_menue_exit_selected = "| # EXIT     # |";
+		const char* optiones_menue_exit_not_selected = "|   exit       |";
+
+		const char* optiones_menue_load_selected = "| # LOAD     # |";
+		const char* optiones_menue_load_not_selected = "|   load       |";
+
+		const char* optiones_menue_save_selected = "| # SAVE     # |";
+		const char* optiones_menue_save_not_selected = "|   save       |";
+	};
 }
 
 constexpr auto UP_ARROW_KEY = 296;

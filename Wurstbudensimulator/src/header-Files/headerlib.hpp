@@ -5,6 +5,7 @@
 #include <fstream>
 #include <conio.h>
 #include <filesystem>
+#include <windows.h>
 
 //Own Headers
 #include "Utillity.hpp"
