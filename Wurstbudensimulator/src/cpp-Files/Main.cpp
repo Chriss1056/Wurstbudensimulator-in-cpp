@@ -14,7 +14,7 @@ int main()
 	markttest();
 	preisetest();
 	optionestest();
-	std::cout << "Hello World!" << std::endl;
+	std::cout << "Hello World." << std::endl;
 
 	saveFileMain(&player, &nodemanager);
 
