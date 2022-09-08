@@ -5,7 +5,7 @@ void banktest()
 	std::cout << "Bank" << std::endl;
 }
 
-void showBankMainMenue(player* player, nodemanager* nodemanager)
+void showBankMainMenue(player* player)
 {
 	int terminate, position, tick;
 

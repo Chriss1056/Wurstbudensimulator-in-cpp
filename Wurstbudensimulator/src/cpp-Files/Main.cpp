@@ -105,7 +105,12 @@ int main()
 					{
 					case 0:
 					{
-						showBankMainMenue(&player, &nodemanager);
+						showBankMainMenue(&player);
+						break;
+					}
+					case 3:
+					{
+						showOptionesMainMenue(&player, &nodemanager);
 						break;
 					}
 					default:

@@ -2,4 +2,4 @@
 
 void banktest();
 
-void showBankMainMenue(player* player, nodemanager* nodemanager);
+void showBankMainMenue(player* player);
