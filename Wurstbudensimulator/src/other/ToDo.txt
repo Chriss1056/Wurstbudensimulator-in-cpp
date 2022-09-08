@@ -1,0 +1,7 @@
+- Adding Text and Background Colouring;
+- Implement "void saveNodesToFile(const char* filename);"
+- Implement "void loadNodesFromFile(const char* filename);"
+
+- Add Game
+
+- Bevore building for release, activate #define RELEASE in main.h!
