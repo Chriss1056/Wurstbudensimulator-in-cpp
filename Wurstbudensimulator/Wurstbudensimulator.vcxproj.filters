@@ -41,31 +41,31 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\header-Files\headerlib.h">
+    <ClInclude Include="src\header-Files\headerlib.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\header-Files\Bank.h">
+    <ClInclude Include="src\header-Files\Bank.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\header-Files\Markt.h">
+    <ClInclude Include="src\header-Files\Markt.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\header-Files\Preise.h">
+    <ClInclude Include="src\header-Files\Preise.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\header-Files\Optiones.h">
+    <ClInclude Include="src\header-Files\Optiones.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\header-Files\Nodes.h">
+    <ClInclude Include="src\header-Files\Nodes.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\header-Files\Main.h">
+    <ClInclude Include="src\header-Files\Main.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\header-Files\SavefileManager.h">
+    <ClInclude Include="src\header-Files\SavefileManager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\header-Files\Utillity.h">
+    <ClInclude Include="src\header-Files\Utillity.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
