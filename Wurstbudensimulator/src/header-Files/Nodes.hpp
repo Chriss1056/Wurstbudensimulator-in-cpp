@@ -18,7 +18,7 @@ public:
 
 	void createNode(const char* name);
 	void removeNode(const char* name);
-	node* getNodeByName(const char* name);
+	void getNodeByName(const char* name, node* node);
 
 	void saveNodesToFile(const char* filename);
 	void loadNodesFromFile(const char* filename);

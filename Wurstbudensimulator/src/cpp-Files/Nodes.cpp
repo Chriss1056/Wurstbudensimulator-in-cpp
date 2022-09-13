@@ -44,7 +44,7 @@ void nodemanager::removeNode(const char* name)
 	delete(fordeletion);
 }
 
-node* nodemanager::getNodeByName(const char* name)
+void nodemanager::getNodeByName(const char* name, node* node)
 {
 	int found = 0;
 	t = h;
@@ -54,14 +54,13 @@ node* nodemanager::getNodeByName(const char* name)
 		if (t == n->next)
 		{
 			std::cerr << "Node <" << name << "> not found!" << std::endl;
-			return NULL;
+			return;
 		}
 		else if (t->name == name)
 		{
 			found = 1;
 		}
 	} while (!found);
-	return t;
 }
 
 void nodemanager::saveNodesToFile(const char* filename)

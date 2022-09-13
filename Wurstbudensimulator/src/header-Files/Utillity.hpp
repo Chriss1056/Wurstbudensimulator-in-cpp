@@ -8,6 +8,17 @@ struct player
 	float kredit;
 };
 
+constexpr auto UP_ARROW_KEY = 296;
+constexpr auto DOWN_ARROW_KEY = 304;
+
+constexpr auto ENTER_KEY = 13;
+
+constexpr auto ESCAPE_KEY = 27;
+
+void utillitytest();
+
+int get_key();
+
 namespace menue_strings
 {
 	struct main_menue
@@ -45,14 +56,3 @@ namespace menue_strings
 		const char* optiones_menue_save_not_selected = "|   save       |";
 	};
 }
-
-constexpr auto UP_ARROW_KEY = 296;
-constexpr auto DOWN_ARROW_KEY = 304;
-
-constexpr auto ENTER_KEY = 13;
-
-constexpr auto ESCAPE_KEY = 27;
-
-void utillitytest();
-
-int get_key();
