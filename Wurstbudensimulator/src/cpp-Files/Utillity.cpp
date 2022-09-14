@@ -14,3 +14,21 @@ int get_key()
 	}
 	return key;
 }
+
+void text_color(console::foreground color)
+{
+	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(handle, color);
+}
+
+void text_background_color(console::background color)
+{
+	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(handle, color);
+}
+
+void set_text_flags(console::special flag)
+{
+	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(handle, flag);
+}

@@ -69,14 +69,20 @@ void showSaveFileLoadMenue(nodemanager* nodemanager, player* player)
 		if (position == 0)
 		{
 			//umfärben
+			text_color(console::foreground::F_BLUE_D);
 			std::cout << "| # YES #                           |" << std::endl;
+			text_color(console::foreground::F_BLACK);
 			std::cout << "|   no                              |" << std::endl;
+			text_color(console::foreground::F_BLACK);
 		}
 		else if (position == 1)
 		{
 			//Umfärben
+			text_color(console::foreground::F_BLACK);
 			std::cout << "|   yes                             |" << std::endl;
+			text_color(console::foreground::F_BLUE_D);
 			std::cout << "| # NO  #                           |" << std::endl;
+			text_color(console::foreground::F_BLACK);
 		}
 		else
 		{
