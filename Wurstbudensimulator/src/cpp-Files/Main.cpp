@@ -5,11 +5,11 @@ int main()
 	player player;
 	nodemanager nodemanager;
 
-	TCHAR szNewTitle[MAX_PATH];
+	TCHAR title[MAX_PATH];
 
-	StringCchPrintf(szNewTitle, MAX_PATH, TEXT("Wurstbudensimulator V5.0.0.0"));
+	StringCchPrintf(title, MAX_PATH, TEXT("Wurstbudensimulator V5.0"));
 
-	if (!SetConsoleTitle(szNewTitle))
+	if (!SetConsoleTitle(title))
 	{
 		system("cls");
 		std::cout << "Something went wrong..." << std::endl;
