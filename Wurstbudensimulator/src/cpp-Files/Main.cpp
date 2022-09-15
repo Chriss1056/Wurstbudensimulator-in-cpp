@@ -5,6 +5,17 @@ int main()
 	player player;
 	nodemanager nodemanager;
 
+	TCHAR szNewTitle[MAX_PATH];
+
+	StringCchPrintf(szNewTitle, MAX_PATH, TEXT("Wurstbudensimulator V5.0.0.0"));
+
+	if (!SetConsoleTitle(szNewTitle))
+	{
+		system("cls");
+		std::cout << "Something went wrong..." << std::endl;
+		return 1;
+	}
+
 	menue_strings::main_menue main_menue;
 
 	utillitytest();

@@ -3,9 +3,12 @@
 //C/C++ standard Headers
 #include <iostream>
 #include <fstream>
-#include <conio.h>
 #include <filesystem>
+
+#include <conio.h>
 #include <windows.h>
+#include <strsafe.h>
+#include <tchar.h>
 
 //Own Headers
 #include "Utillity.hpp"
