@@ -1,4 +1,3 @@
-- Adding Text and Background Colouring;
 - Implement "void saveNodesToFile(const char* filename);"
 - Implement "void loadNodesFromFile(const char* filename);"
 
