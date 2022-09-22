@@ -38,6 +38,15 @@ int showOptionesMainMenue(player* player, nodemanager* nodemanager)
 		std::cout << "| ------------ |" << std::endl;
 		if (position == 2)
 		{
+			std::cout << optiones_menue.optiones_menue_settings_selected << std::endl;
+		}
+		else
+		{
+			std::cout << optiones_menue.optiones_menue_settings_not_selected << std::endl;
+		}
+		std::cout << "| ------------ |" << std::endl;
+		if (position == 3)
+		{
 			std::cout << optiones_menue.optiones_menue_exit_selected << std::endl;
 		}
 		else
@@ -45,7 +54,7 @@ int showOptionesMainMenue(player* player, nodemanager* nodemanager)
 			std::cout << optiones_menue.optiones_menue_exit_not_selected << std::endl;
 		}
 		std::cout << "| ------------ |" << std::endl;
-		if (position == 3)
+		if (position == 4)
 		{
 			std::cout << optiones_menue.optiones_menue_back_selected << std::endl;
 		}
@@ -66,7 +75,7 @@ int showOptionesMainMenue(player* player, nodemanager* nodemanager)
 					position--;
 					tick = 1;
 				}
-				else if ((key == DOWN_ARROW_KEY) && (position < 3))
+				else if ((key == DOWN_ARROW_KEY) && (position < 4))
 				{
 					position++;
 					tick = 1;
@@ -82,7 +91,7 @@ int showOptionesMainMenue(player* player, nodemanager* nodemanager)
 						tick = 1;
 						break;
 					}
-					case 2:
+					case 3:
 					{
 						int validation, validation_tick;
 
@@ -93,7 +102,7 @@ int showOptionesMainMenue(player* player, nodemanager* nodemanager)
 							system("cls");
 
 							std::cout << "Are you sure?" << std::endl;
-							std::cout << "Press Enter to continue" << std::endl;
+							std::cout << "Press Enter to continue..." << std::endl;
 
 							do
 							{
@@ -118,7 +127,7 @@ int showOptionesMainMenue(player* player, nodemanager* nodemanager)
 						tick = 1;
 						break;
 					}
-					case 3:
+					case 4:
 					{
 						system("cls");
 						tick = 1;
@@ -129,7 +138,7 @@ int showOptionesMainMenue(player* player, nodemanager* nodemanager)
 					{
 						system("cls");
 						std::cerr << "Something went wrong..." << std::endl;
-						Sleep(5000);
+						Sleep(500);
 						key = NULL;
 						tick = 1;
 						system("cls");

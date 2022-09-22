@@ -19,3 +19,4 @@
 #include "Optiones.hpp"
 #include "Main.hpp"
 #include "SavefileManager.hpp"
+#include "SettingsManager.hpp"

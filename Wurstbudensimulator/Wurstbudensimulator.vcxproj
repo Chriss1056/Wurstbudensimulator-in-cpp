@@ -156,6 +156,7 @@
     <ClCompile Include="src\cpp-Files\Preise.cpp" />
     <ClCompile Include="src\cpp-Files\SavefileManager.cpp" />
     <ClCompile Include="src\cpp-Files\Optiones.cpp" />
+    <ClCompile Include="src\cpp-Files\SettingsManager.cpp" />
     <ClCompile Include="src\cpp-Files\Utillity.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +168,7 @@
     <ClInclude Include="src\header-Files\Markt.hpp" />
     <ClInclude Include="src\header-Files\SavefileManager.hpp" />
     <ClInclude Include="src\header-Files\Optiones.hpp" />
+    <ClInclude Include="src\header-Files\SettingsManager.hpp" />
     <ClInclude Include="src\header-Files\Utillity.hpp" />
   </ItemGroup>
   <ItemGroup>

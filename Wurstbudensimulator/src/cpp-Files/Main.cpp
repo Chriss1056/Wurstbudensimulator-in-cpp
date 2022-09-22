@@ -2,6 +2,37 @@
 
 int main()
 {
+	utillitytest();
+	savefileManagerTest();
+	settingsManagerTest();
+	nodestest();
+	banktest();
+	markttest();
+	preisetest();
+	optionestest();
+	std::cout << "Hello World." << std::endl;
+	std::cin.get();
+
+	system("cls");
+	std::cout << "### Wurstbudensimulator 5.0 ###" << std::endl << std::endl;
+#ifdef RELEASE
+	std::cout << "Branch:  " << RELEASE_VERSION << std::endl;
+#else
+	std::cout << "Branch:  " << BETA_VERSION << std::endl;
+#endif
+	std::cout << "Major:   " << MAJOR_VERSION << std::endl;
+	std::cout << "Minor:   " << MINOR_VERSION << std::endl;
+	std::cout << "Release: " << RELEASE_VERSION << std::endl;
+	std::cout << "Build:   " << BUILD_VERSION << std::endl << std::endl;
+#ifdef RELEASE
+	std::cout << "Version: " << STABLE_VERSION << " " << MAJOR_VERSION << "." << MINOR_VERSION << "." << RELEASE_VERSION << "." << BUILD_VERSION << std::endl << std::endl;
+#else
+	std::cout << "Version: " << BETA_VERSION << " " << MAJOR_VERSION << "." << MINOR_VERSION << "." << RELEASE_VERSION << "." << BUILD_VERSION << std::endl << std::endl;
+#endif
+	std::cout << "Please expect bugs and errors while playing this Version of the game" << std::endl << std::endl;
+	std::cout << "Copyright \251 Christopher Glechner, 2022" << std::endl;
+	std::cin.get();
+
 	player player;
 	nodemanager nodemanager;
 
@@ -17,15 +48,6 @@ int main()
 	}
 
 	menue_strings::main_menue main_menue;
-
-	utillitytest();
-	savefileManagerTest();
-	nodestest();
-	banktest();
-	markttest();
-	preisetest();
-	optionestest();
-	std::cout << "Hello World." << std::endl;
 
 	saveFileMain(&player, &nodemanager);
 
@@ -67,17 +89,17 @@ int main()
 		std::cout << "| ------------------------------------ |" << std::endl;
 		if (position == 3)
 		{
-			std::cout << main_menue.einstellungen_main_menue_selected << std::endl;
+			std::cout << main_menue.optiones_main_menue_selected << std::endl;
 			std::cout << main_menue.hilfe_main_menue_not_selected << std::endl;
 		}
 		else if (position == 4)
 		{
-			std::cout << main_menue.einstellungen_main_menue_not_selected << std::endl;
+			std::cout << main_menue.optiones_main_menue_not_selected << std::endl;
 			std::cout << main_menue.hilfe_main_menue_selected << std::endl;
 		}
 		else
 		{
-			std::cout << main_menue.einstellungen_main_menue_not_selected << std::endl;
+			std::cout << main_menue.optiones_main_menue_not_selected << std::endl;
 			std::cout << main_menue.hilfe_main_menue_not_selected << std::endl;
 		}
 		std::cout << "| ------------------------------------ |" << std::endl;

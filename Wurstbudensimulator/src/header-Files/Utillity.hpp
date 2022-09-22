@@ -89,8 +89,8 @@ namespace menue_strings
 		const char* preise_main_menue_selected = "| # PREISE                           # |";
 		const char* preise_main_menue_not_selected = "|   preise                             |";
 
-		const char* einstellungen_main_menue_selected = "| # EINSTELLUNGEN                    # |";
-		const char* einstellungen_main_menue_not_selected = "|   einstellungen                      |";
+		const char* optiones_main_menue_selected = "| # OPTIONEN                         # |";
+		const char* optiones_main_menue_not_selected = "|   optionen                           |";
 
 		const char* hilfe_main_menue_selected = "| # HILFE                            # |";
 		const char* hilfe_main_menue_not_selected = "|   hilfe                              |";
@@ -111,5 +111,8 @@ namespace menue_strings
 
 		const char* optiones_menue_save_selected = "| # SAVE     # |";
 		const char* optiones_menue_save_not_selected = "|   save       |";
+
+		const char* optiones_menue_settings_selected = "| # SETTINGS # |";
+		const char* optiones_menue_settings_not_selected = "|   settings   |";
 	};
 }
