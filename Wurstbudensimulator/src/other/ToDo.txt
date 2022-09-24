@@ -1,5 +1,6 @@
 - Implement "void saveNodesToFile(const char* filename);"
 - Implement "void loadNodesFromFile(const char* filename);"
+- get folders automaticaly
 
 - Add Game
 

@@ -16,7 +16,25 @@ void showBankMainMenue(player* player)
 	do
 	{
 		system("cls");
+
 		std::cout << "The Bank is currently closed." << std::endl;
+		std::cout << "Press ESC to get to the Main Menue." << std::endl;
+
+
+		std::cout << "*****************Bank*****************" << std::endl;
+		std::cout << "Press ESC to get to the Main Menue." << std::endl;
+		std::cout << "Press ESC to get to the Main Menue." << std::endl;
+		std::cout << "Press ESC to get to the Main Menue." << std::endl;
+		std::cout << "Press ESC to get to the Main Menue." << std::endl;
+		std::cout << "| # KONTOSTAND # |" << std::endl;
+		std::cout << "Press ESC to get to the Main Menue." << std::endl;
+		std::cout << "Press ESC to get to the Main Menue." << std::endl;
+		std::cout << "Press ESC to get to the Main Menue." << std::endl;
+		std::cout << "Press ESC to get to the Main Menue." << std::endl;
+		std::cout << "Press ESC to get to the Main Menue." << std::endl;
+		std::cout << "Press ESC to get to the Main Menue." << std::endl;
+		std::cout << "Press ESC to get to the Main Menue." << std::endl;
+		std::cout << "Press ESC to get to the Main Menue." << std::endl;
 		std::cout << "Press ESC to get to the Main Menue." << std::endl;
 
 		do
