@@ -1,6 +1,6 @@
 #include "../header-Files/headerlib.hpp"
 
-int main()
+int init()
 {
 	utillitytest();
 	savefileManagerTest();
@@ -33,9 +33,6 @@ int main()
 	std::cout << "Copyright \251 Christopher Glechner, 2022" << std::endl;
 	std::cin.get();
 
-	player player;
-	nodemanager nodemanager;
-
 	TCHAR title[MAX_PATH];
 
 	StringCchPrintf(title, MAX_PATH, TEXT("Wurstbudensimulator V5.0"));
@@ -46,7 +43,18 @@ int main()
 		std::cout << "Something went wrong..." << std::endl;
 		return 1;
 	}
+	return 0;
+}
 
+int main()
+{
+	if (init())
+	{
+		return 1;
+	}
+
+	player player;
+	nodemanager nodemanager;
 	menue_strings::main_menue main_menue;
 
 	saveFileMain(&player, &nodemanager);

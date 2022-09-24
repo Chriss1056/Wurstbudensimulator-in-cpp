@@ -19,6 +19,8 @@ void utillitytest();
 
 int get_key();
 
+void gotoxy(short x, short y);
+
 namespace console
 {
 	enum foreground

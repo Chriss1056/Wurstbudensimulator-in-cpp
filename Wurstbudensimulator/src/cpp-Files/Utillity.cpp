@@ -32,3 +32,12 @@ void set_text_flags(console::special flag)
 	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(handle, flag);
 }
+
+void gotoxy(short x, short y)
+{
+	HANDLE hCon = GetStdHandle(STD_OUTPUT_HANDLE);
+	COORD pos;
+	pos.X = x - 1;
+	pos.Y = y - 1;
+	SetConsoleCursorPosition(hCon, pos);
+}
