@@ -22,7 +22,7 @@ void showBankMainMenue(player* player)
 
 
 		std::cout << "*****************Bank*****************" << std::endl;
-		std::cout << "Press ESC to get to the Main Menue." << std::endl;
+		std::cout << "| Hello " << player->name << " |" << std::endl;
 		std::cout << "Press ESC to get to the Main Menue." << std::endl;
 		std::cout << "Press ESC to get to the Main Menue." << std::endl;
 		std::cout << "Press ESC to get to the Main Menue." << std::endl;

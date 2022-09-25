@@ -79,6 +79,6 @@
     <Text Include="src\other\ToDo.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\playerData\test_saveFile_00000.wsim" />
+    <None Include="src\playerData\test_saveFile_testuser.wsim" />
   </ItemGroup>
 </Project>

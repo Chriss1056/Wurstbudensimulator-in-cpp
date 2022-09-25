@@ -11,6 +11,7 @@ void nodemanager::initNodes()
 	n->bevore = h;
 	t = n;
 	h = n;
+	nodes++;
 }
 
 void nodemanager::createNode(const char* name)
@@ -20,6 +21,7 @@ void nodemanager::createNode(const char* name)
 	n->bevore = t;
 	t->next = n;
 	t = t->next;
+	nodes++;
 }
 
 void nodemanager::removeNode(const char* name)
@@ -42,6 +44,7 @@ void nodemanager::removeNode(const char* name)
 	t2->next = t;
 	t->bevore = t2;
 	delete(fordeletion);
+	nodes--;
 }
 
 void nodemanager::getNodeByName(const char* name, node* node)

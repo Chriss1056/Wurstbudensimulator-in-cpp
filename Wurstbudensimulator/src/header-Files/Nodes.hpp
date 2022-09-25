@@ -24,6 +24,7 @@ public:
 	void loadNodesFromFile(const char* filename);
 
 private:
+	int nodes = 0;
 	node* n;
 	node* t;
 	node* t2;
