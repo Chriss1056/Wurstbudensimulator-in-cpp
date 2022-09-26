@@ -43,6 +43,9 @@ int init()
 		std::cout << "Something went wrong..." << std::endl;
 		return 1;
 	}
+
+	setCursorVisibility(0);
+
 	return 0;
 }
 
@@ -164,7 +167,7 @@ int main()
 					{
 						system("cls");
 						std::cerr << "Something went wrong..." << std::endl;
-						Sleep(5000);
+						Sleep(500);
 						key = NULL;
 						tick = 1;
 						system("cls");

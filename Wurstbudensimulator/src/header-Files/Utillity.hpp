@@ -20,6 +20,7 @@ void utillitytest();
 int get_key();
 
 void gotoxy(short x, short y);
+void setCursorVisibility(int show);
 
 namespace console
 {
@@ -116,5 +117,13 @@ namespace menue_strings
 
 		const char* optiones_menue_settings_selected = "| # SETTINGS # |";
 		const char* optiones_menue_settings_not_selected = "|   settings   |";
+	};
+	struct bank_menue
+	{
+		const char* bank_menue_bank_balance_selected = "| # KONTOSTAND                     # |";
+		const char* bank_menue_bank_balance_not_selected = "|   kontostand                       |";
+
+		const char* bank_menue_exit_selected = "| # EXIT                           # |";
+		const char* bank_menue_exit_not_selected = "|   exit                             |";
 	};
 }

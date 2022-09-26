@@ -41,3 +41,12 @@ void gotoxy(short x, short y)
 	pos.Y = y - 1;
 	SetConsoleCursorPosition(hCon, pos);
 }
+
+void setCursorVisibility(int show)
+{
+	HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_CURSOR_INFO     cursorInfo;
+	GetConsoleCursorInfo(out, &cursorInfo);
+	cursorInfo.bVisible = show;
+	SetConsoleCursorInfo(out, &cursorInfo);
+}

@@ -9,9 +9,13 @@ int lookForSaveFile()
 {
 	std::string path;
 
+	setCursorVisibility(1);
+
 	system("cls");
 	std::cout << "Please enter the path to your Savefiles with double Backslashes(C:\\Users\\...\\playerData\\): "; 
 	getline(std::cin, path);
+
+	setCursorVisibility(0);
 
 #ifndef RELEASE
 	if (path.empty())
