@@ -2,6 +2,6 @@
 
 ## Supported Versions
 
-| LTS   | Released | Version       |
-| ----- | -------- | ------------- |
-| :x:   | :x:      | 0 . 0 . 0 . 0 |
+| LTS   | Released          | Branch | Version            |
+| ----- | ----------------- | ------ | ------------------ |
+| :x:   | :white_check_mark:| BETA   | 0 . 8 . 578 . 4987 |
