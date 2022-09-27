@@ -10,6 +10,7 @@
 #include <windows.h>
 #include <strsafe.h>
 #include <tchar.h>
+#include <stdio.h>
 
 //Own Headers
 #include "Utillity.hpp"

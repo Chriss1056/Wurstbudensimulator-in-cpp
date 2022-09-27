@@ -44,13 +44,15 @@ void playerDefaultStatsSetup(player* player)
 {
 	player->name = "default";
 	player->money = 50000.00;
-	player->zinsen = 1.00 + 0.00;
-	player->kredit_raw = 0.00;
+	player->zinsen = 1.10;
+	player->kredit_raw = 20.00;
 	player->kredit = player->kredit_raw * player->zinsen;
-	player->einnahmen_taeglich = 0.00;
-	player->einnahmen_gesamt = 0.00;
-	player->ausgaben_taeglich = 0.00;
-	player->ausgaben_gesamt = 0.00;
+	player->einnahmen_taeglich = 10.00;
+	player->einnahmen_gesamt = 20.00;
+	player->ausgaben_taeglich = 20.00;
+	player->ausgaben_gesamt = 10.00;
+	player->umsatz_taeglich = player->einnahmen_taeglich - player->ausgaben_taeglich;
+	player->umsatz_gesamt = player->einnahmen_gesamt - player->ausgaben_gesamt;
 }
 
 void showSaveFileLoadSelectorMenue(nodemanager* nodemanager, player* player)
