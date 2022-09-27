@@ -19,7 +19,7 @@ void showBankMainMenue(player* player)
 	do
 	{
 		system("cls");
-
+		
 		std::cout << "*****************Bank*****************" << std::endl;
 		std::cout << "| Hello                              |" << std::endl;
 		std::cout << "| Welcome to the MAIN STREET BANK.   |" << std::endl;

@@ -123,6 +123,9 @@ namespace menue_strings
 		const char* bank_menue_bank_balance_selected = "| # KONTOSTAND                     # |";
 		const char* bank_menue_bank_balance_not_selected = "|   kontostand                       |";
 
+		const char* bank_menue_kredit_selected = "| # KREDITE                        # |";
+		const char* bank_menue_kredit_not_selected = "|   kredite                          |";
+
 		const char* bank_menue_exit_selected = "| # EXIT                           # |";
 		const char* bank_menue_exit_not_selected = "|   exit                             |";
 	};
