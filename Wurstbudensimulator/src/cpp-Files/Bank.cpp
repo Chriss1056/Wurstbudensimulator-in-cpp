@@ -5,6 +5,22 @@ void banktest()
 	std::cout << "Bank" << std::endl;
 }
 
+void kreditAufnehmen(player* player)
+{
+	system("cls");
+	std::cout << "Not Implemented yet." << std::endl;
+	std::cout << "press ENTER to return..." << std::endl;
+	std::cin.get();
+}
+
+void kreditAbzahlen(player* player)
+{
+	system("cls");
+	std::cout << "Not Implemented yet." << std::endl;
+	std::cout << "press ENTER to return..." << std::endl;
+	std::cin.get();
+}
+
 void kreditMainMenue(player* player)
 {
 
@@ -20,7 +36,47 @@ void kreditMainMenue(player* player)
 	{
 		system("cls");
 
-		std::cout << "kredite" << std::endl;
+		std::cout << "*************Kredit*Menue*************" << std::endl;
+		std::cout << "| Kontostand:                        |" << std::endl;
+		std::cout << "| Zinssatz:                          |" << std::endl;
+		std::cout << "| Kredit o.Z.:                       |" << std::endl;
+		std::cout << "| Kredit m.Z.:                       |" << std::endl;
+		std::cout << "| ---------------------------------- |" << std::endl;
+		if (position == 0)
+		{
+			std::cout << bank_menue.bank_menue_kredit_aufnehmen_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_abzahlen_not_selected << std::endl;
+		}
+		else if (position == 1)
+		{
+			std::cout << bank_menue.bank_menue_kredit_aufnehmen_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_abzahlen_selected << std::endl;
+		}
+		else
+		{
+			std::cout << bank_menue.bank_menue_kredit_aufnehmen_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_abzahlen_not_selected << std::endl;
+		}
+		std::cout << "| ---------------------------------- |" << std::endl;
+		if (position == 2)
+		{
+			std::cout << bank_menue.bank_menue_exit_selected << std::endl;
+		}
+		else
+		{
+			std::cout << bank_menue.bank_menue_exit_not_selected << std::endl;
+		}
+		std::cout << "**************************************" << std::endl;
+
+		gotoxy(18, 2);
+		printf("%.2f$", player->money);
+		gotoxy(18, 3);
+		printf("%.2f", player->zinsen - 1.00);
+		std::cout << "%";
+		gotoxy(18, 4);
+		printf("%.2f$", player->kredit_raw);
+		gotoxy(18, 5);
+		printf("%.2f$", player->kredit);
 
 		do
 		{
@@ -33,7 +89,7 @@ void kreditMainMenue(player* player)
 					position--;
 					tick = 1;
 				}
-				else if ((key == DOWN_ARROW_KEY) && (position < 0))
+				else if ((key == DOWN_ARROW_KEY) && (position < 2))
 				{
 					position++;
 					tick = 1;
@@ -43,6 +99,18 @@ void kreditMainMenue(player* player)
 					switch (position)
 					{
 					case 0:
+					{
+						kreditAufnehmen(player);
+						tick = 1;
+						break;
+					}
+					case 1:
+					{
+						kreditAbzahlen(player);
+						tick = 1;
+						break;
+					}
+					case 2:
 					{
 						system("cls");
 						tick = 1;
@@ -74,10 +142,9 @@ void bankBalanceMainMenue(player* player)
 
 	menue_strings::bank_menue bank_menue;
 
-	int terminate, position, tick;
+	int terminate, tick;
 
 	terminate = 0;
-	position = 0;
 	tick = 0;
 
 	do
@@ -211,7 +278,7 @@ void showBankMainMenue(player* player)
 		}
 		std::cout << "**************************************" << std::endl;
 
-		std::cout << "The Bank is currently reworked." << std::endl;
+		std::cout << "The Bank is currently not fully operational due to maintenance." << std::endl;
 
 		gotoxy(9, 2);
 		std::cout << player->name;

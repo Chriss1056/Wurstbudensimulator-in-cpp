@@ -135,6 +135,12 @@ namespace menue_strings
 		const char* bank_menue_main_kredit_selected = "| # KREDITE                        # |";
 		const char* bank_menue_main_kredit_not_selected = "|   kredite                          |";
 
+		const char* bank_menue_kredit_aufnehmen_selected = "| # AUFNEHMEN                      # |";
+		const char* bank_menue_kredit_aufnehmen_not_selected = "|   aufnehmen                        |";
+
+		const char* bank_menue_kredit_abzahlen_selected = "| # ABZAHLEN                       # |";
+		const char* bank_menue_kredit_abzahlen_not_selected = "|   abzahlen                         |";
+
 		const char* bank_menue_exit_selected = "| # EXIT                           # |";
 		const char* bank_menue_exit_not_selected = "|   exit                             |";
 	};
