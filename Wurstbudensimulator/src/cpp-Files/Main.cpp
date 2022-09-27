@@ -30,7 +30,7 @@ int init()
 	std::cout << "Version: " << BETA_VERSION << " " << MAJOR_VERSION << "." << MINOR_VERSION << "." << RELEASE_VERSION << "." << BUILD_VERSION << std::endl << std::endl;
 #endif
 	std::cout << "Please expect bugs and errors while playing this Version of the game" << std::endl << std::endl;
-	std::cout << "Copyright \251 Christopher Glechner, 2022" << std::endl;
+	std::cout << "Copyright " << COPYRIGHT_SYMBOL << " Christopher Glechner, 2022" << std::endl;
 	std::cin.get();
 
 	TCHAR title[MAX_PATH];

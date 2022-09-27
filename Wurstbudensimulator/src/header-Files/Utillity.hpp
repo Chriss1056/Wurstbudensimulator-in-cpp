@@ -1,11 +1,20 @@
 #pragma once
 
+#define COPYRIGHT_SYMBOL "\251"
+
 struct player
 {
 	const char* name;
 	float money;
 	float zinsen;
+	float kredit_raw;
 	float kredit;
+	float einnahmen_taeglich;
+	float einnahmen_gesamt;
+	float ausgaben_taeglich;
+	float ausgaben_gesamt;
+	float umsatz_taeglich;
+	float umsatz_gesamt;
 };
 
 constexpr auto UP_ARROW_KEY = 296;
@@ -120,11 +129,11 @@ namespace menue_strings
 	};
 	struct bank_menue
 	{
-		const char* bank_menue_bank_balance_selected = "| # KONTOSTAND                     # |";
-		const char* bank_menue_bank_balance_not_selected = "|   kontostand                       |";
+		const char* bank_menue_main_bank_balance_selected = "| # KONTOSTAND                     # |";
+		const char* bank_menue_main_bank_balance_not_selected = "|   kontostand                       |";
 
-		const char* bank_menue_kredit_selected = "| # KREDITE                        # |";
-		const char* bank_menue_kredit_not_selected = "|   kredite                          |";
+		const char* bank_menue_main_kredit_selected = "| # KREDITE                        # |";
+		const char* bank_menue_main_kredit_not_selected = "|   kredite                          |";
 
 		const char* bank_menue_exit_selected = "| # EXIT                           # |";
 		const char* bank_menue_exit_not_selected = "|   exit                             |";
