@@ -53,6 +53,10 @@ void playerDefaultStatsSetup(player* player)
 	player->ausgaben_gesamt = 10.00f;
 	player->umsatz_taeglich = player->einnahmen_taeglich - player->ausgaben_taeglich;
 	player->umsatz_gesamt = player->einnahmen_gesamt - player->ausgaben_gesamt;
+	player->boerse = 0;
+	player->min_aktien_req = 0.00;
+	player->aktienwert = 0.00;
+	player->aktienmarkt = 0.00;
 }
 
 void showSaveFileLoadSelectorMenue(nodemanager* nodemanager, player* player)

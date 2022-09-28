@@ -15,6 +15,10 @@ struct player
 	float ausgaben_gesamt;
 	float umsatz_taeglich;
 	float umsatz_gesamt;
+	int boerse;
+	float min_aktien_req;
+	float aktienwert;
+	float aktienmarkt;
 };
 
 constexpr auto UP_ARROW_KEY = 296;
@@ -115,8 +119,8 @@ namespace menue_strings
 		const char* optiones_menue_back_selected = "| # BACK     # |";
 		const char* optiones_menue_back_not_selected = "|   back       |";
 
-		const char* optiones_menue_exit_selected = "| # EXIT     # |";
-		const char* optiones_menue_exit_not_selected = "|   exit       |";
+		const char* optiones_menue_exit_selected = "| # QUIT     # |";
+		const char* optiones_menue_exit_not_selected = "|   quit       |";
 
 		const char* optiones_menue_load_selected = "| # LOAD     # |";
 		const char* optiones_menue_load_not_selected = "|   load       |";
@@ -135,11 +139,17 @@ namespace menue_strings
 		const char* bank_menue_main_kredit_selected = "| # KREDITE                        # |";
 		const char* bank_menue_main_kredit_not_selected = "|   kredite                          |";
 
+		const char* bank_menue_main_börse_selected = "| # BOERSE                         # |";
+		const char* bank_menue_main_börse_not_selected = "|   boerse                           |";
+
 		const char* bank_menue_kredit_aufnehmen_selected = "| # AUFNEHMEN                      # |";
 		const char* bank_menue_kredit_aufnehmen_not_selected = "|   aufnehmen                        |";
 
 		const char* bank_menue_kredit_abzahlen_selected = "| # ABZAHLEN                       # |";
 		const char* bank_menue_kredit_abzahlen_not_selected = "|   abzahlen                         |";
+
+		const char* bank_menue_back_selected = "| # BACK                           # |";
+		const char* bank_menue_back_not_selected = "|   back                             |";
 
 		const char* bank_menue_exit_selected = "| # EXIT                           # |";
 		const char* bank_menue_exit_not_selected = "|   exit                             |";

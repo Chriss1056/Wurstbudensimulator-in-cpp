@@ -21,6 +21,81 @@ void kreditAbzahlen(player* player)
 	std::cin.get();
 }
 
+void aktienMainMenue(player* player)
+{
+	
+	menue_strings::bank_menue bank_menue;
+
+	int terminate, position, tick;
+
+	terminate = 0;
+	position = 0;
+	tick = 0;
+
+	do
+	{
+		system("cls");
+
+		std::cout << "****************Boerse****************" << std::endl;
+		if (position == 0)
+		{
+			std::cout << bank_menue.bank_menue_exit_selected << std::endl;
+		}
+		else
+		{
+			std::cout << bank_menue.bank_menue_exit_not_selected << std::endl;
+		}
+		std::cout << "**************************************" << std::endl;
+
+		std::cout << "The Boerse is currently not available." << std::endl;
+
+		do
+		{
+			if (_kbhit())
+			{
+				int key = get_key();
+
+				if ((key == UP_ARROW_KEY) && (position > 0))
+				{
+					position--;
+					tick = 1;
+				}
+				else if ((key == DOWN_ARROW_KEY) && (position < 0))
+				{
+					position++;
+					tick = 1;
+				}
+				else if (key == ENTER_KEY)
+				{
+					switch (position)
+					{
+					case 0:
+					{
+						system("cls");
+						tick = 1;
+						terminate = 1;
+						break;
+					}
+					default:
+					{
+						system("cls");
+						std::cerr << "Something went wrong..." << std::endl;
+						Sleep(500);
+						key = NULL;
+						tick = 1;
+						system("cls");
+						break;
+					}
+					}
+				}
+			}
+		} while (!tick);
+		tick = 0;
+
+	} while (!terminate);
+	terminate = 0;
+}
+
 void kreditMainMenue(player* player)
 {
 
@@ -60,11 +135,11 @@ void kreditMainMenue(player* player)
 		std::cout << "| ---------------------------------- |" << std::endl;
 		if (position == 2)
 		{
-			std::cout << bank_menue.bank_menue_exit_selected << std::endl;
+			std::cout << bank_menue.bank_menue_back_selected << std::endl;
 		}
 		else
 		{
-			std::cout << bank_menue.bank_menue_exit_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_back_not_selected << std::endl;
 		}
 		std::cout << "**************************************" << std::endl;
 
@@ -164,7 +239,7 @@ void bankBalanceMainMenue(player* player)
 		std::cout << "| Umsatz T.:                         |" << std::endl;
 		std::cout << "| Umsatz G.:                         |" << std::endl;
 		std::cout << "| ---------------------------------- |" << std::endl;
-		std::cout << bank_menue.bank_menue_exit_selected << std::endl;
+		std::cout << bank_menue.bank_menue_back_selected << std::endl;
 		std::cout << "**************************************" << std::endl;
 
 		gotoxy(18, 2);
@@ -256,19 +331,28 @@ void showBankMainMenue(player* player)
 		{
 			std::cout << bank_menue.bank_menue_main_bank_balance_selected << std::endl;
 			std::cout << bank_menue.bank_menue_main_kredit_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_main_börse_not_selected << std::endl;
 		}
 		else if (position == 1)
 		{
 			std::cout << bank_menue.bank_menue_main_bank_balance_not_selected << std::endl;
 			std::cout << bank_menue.bank_menue_main_kredit_selected << std::endl;
+			std::cout << bank_menue.bank_menue_main_börse_not_selected << std::endl;
+		}
+		else if (position == 2)
+		{
+			std::cout << bank_menue.bank_menue_main_bank_balance_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_main_kredit_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_main_börse_selected << std::endl;
 		}
 		else
 		{
 			std::cout << bank_menue.bank_menue_main_bank_balance_not_selected << std::endl;
 			std::cout << bank_menue.bank_menue_main_kredit_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_main_börse_not_selected << std::endl;
 		}
 		std::cout << "| ---------------------------------- |" << std::endl;
-		if (position == 2)
+		if (position == 3)
 		{
 			std::cout << bank_menue.bank_menue_exit_selected << std::endl;
 		}
@@ -294,7 +378,7 @@ void showBankMainMenue(player* player)
 					position--;
 					tick = 1;
 				}
-				else if ((key == DOWN_ARROW_KEY) && (position < 2))
+				else if ((key == DOWN_ARROW_KEY) && (position < 3))
 				{
 					position++;
 					tick = 1;
@@ -316,6 +400,12 @@ void showBankMainMenue(player* player)
 						break;
 					}
 					case 2:
+					{
+						aktienMainMenue(player);
+						tick = 1;
+						break;
+					}
+					case 3:
 					{
 						system("cls");
 						tick = 1;

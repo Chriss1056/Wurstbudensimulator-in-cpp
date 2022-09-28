@@ -1,6 +1,7 @@
-- Implement "void saveNodesToFile(const char* filename);"
-- Implement "void loadNodesFromFile(const char* filename);"
+- Implement load/save system
+- Implement settings menue
 - get folders automaticaly
+- finish bank
 
 - Add Game
 
