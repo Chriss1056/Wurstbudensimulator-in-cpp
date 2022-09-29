@@ -47,7 +47,7 @@ void aktienMainMenue(player* player)
 		}
 		std::cout << "**************************************" << std::endl;
 
-		std::cout << "The Boerse is currently not available." << std::endl;
+		std::cout << "Die Boerse ist derzeit nicht verfügbar." << std::endl;
 
 		do
 		{
