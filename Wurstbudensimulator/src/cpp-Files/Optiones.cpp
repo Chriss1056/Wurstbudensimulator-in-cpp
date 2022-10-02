@@ -19,7 +19,7 @@ int showOptionesMainMenue(player* player, nodemanager* nodemanager)
 	do
 	{
 		system("cls");
-		std::cout << "****Optiones****" << std::endl;
+		std::cout << "********************Optiones*********************" << std::endl;
 		if (position == 0)
 		{
 			std::cout << optiones_menue.optiones_menue_save_selected << std::endl;
@@ -35,7 +35,7 @@ int showOptionesMainMenue(player* player, nodemanager* nodemanager)
 			std::cout << optiones_menue.optiones_menue_save_not_selected << std::endl;
 			std::cout << optiones_menue.optiones_menue_load_not_selected << std::endl;
 		}
-		std::cout << "| ------------ |" << std::endl;
+		std::cout << "| --------------------------------------------- |" << std::endl;
 		if (position == 2)
 		{
 			std::cout << optiones_menue.optiones_menue_settings_selected << std::endl;
@@ -44,7 +44,7 @@ int showOptionesMainMenue(player* player, nodemanager* nodemanager)
 		{
 			std::cout << optiones_menue.optiones_menue_settings_not_selected << std::endl;
 		}
-		std::cout << "| ------------ |" << std::endl;
+		std::cout << "| --------------------------------------------- |" << std::endl;
 		if (position == 3)
 		{
 			std::cout << optiones_menue.optiones_menue_exit_selected << std::endl;
@@ -53,7 +53,7 @@ int showOptionesMainMenue(player* player, nodemanager* nodemanager)
 		{
 			std::cout << optiones_menue.optiones_menue_exit_not_selected << std::endl;
 		}
-		std::cout << "| ------------ |" << std::endl;
+		std::cout << "| --------------------------------------------- |" << std::endl;
 		if (position == 4)
 		{
 			std::cout << optiones_menue.optiones_menue_back_selected << std::endl;
@@ -62,7 +62,7 @@ int showOptionesMainMenue(player* player, nodemanager* nodemanager)
 		{
 			std::cout << optiones_menue.optiones_menue_back_not_selected << std::endl;
 		}
-		std::cout << "****************" << std::endl;
+		std::cout << "*************************************************" << std::endl;
 
 		do
 		{

@@ -72,7 +72,7 @@ int main()
 	{
 		system("cls");
 
-		std::cout << "***************Main*Menue***************" << std::endl;
+		std::cout << "*******************Main*Menue********************" << std::endl;
 		if (position == 0)
 		{
 			std::cout << main_menue.bank_main_menue_selected << std::endl;
@@ -97,7 +97,7 @@ int main()
 			std::cout << main_menue.markt_main_menue_not_selected << std::endl;
 			std::cout << main_menue.preise_main_menue_not_selected << std::endl;
 		}
-		std::cout << "| ------------------------------------ |" << std::endl;
+		std::cout << "| --------------------------------------------- |" << std::endl;
 		if (position == 3)
 		{
 			std::cout << main_menue.optiones_main_menue_selected << std::endl;
@@ -113,7 +113,7 @@ int main()
 			std::cout << main_menue.optiones_main_menue_not_selected << std::endl;
 			std::cout << main_menue.hilfe_main_menue_not_selected << std::endl;
 		}
-		std::cout << "| ------------------------------------ |" << std::endl;
+		std::cout << "| --------------------------------------------- |" << std::endl;
 		if (position == 5)
 		{
 			std::cout << main_menue.rundenende_main_menue_selected << std::endl;
@@ -122,10 +122,10 @@ int main()
 		{
 			std::cout << main_menue.rundenende_main_menue_not_selected << std::endl;
 		}
-		std::cout << "| ------------------------------------ |" << std::endl;
-		std::cout << "| ARROW_KEYS ... Menue Navigation      |" << std::endl;
-		std::cout << "| ENTER      ... Auswaehlen            |" << std::endl;
-		std::cout << "****************************************" << std::endl;
+		std::cout << "| --------------------------------------------- |" << std::endl;
+		std::cout << "| ARROW_KEYS ... Menue Navigation               |" << std::endl;
+		std::cout << "| ENTER      ... Auswaehlen                     |" << std::endl;
+		std::cout << "*************************************************" << std::endl;
 
 		do
 		{

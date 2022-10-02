@@ -96,62 +96,89 @@ namespace menue_strings
 {
 	struct main_menue
 	{
-		const char* bank_main_menue_selected = "| # BANK                             # |";
-		const char* bank_main_menue_not_selected = "|   bank                               |";
+		const char* bank_main_menue_selected = "| # BANK                                      # |";
+		const char* bank_main_menue_not_selected = "|   bank                                        |";
 
-		const char* markt_main_menue_selected = "| # MARKT                            # |";
-		const char* markt_main_menue_not_selected = "|   markt                              |";
+		const char* markt_main_menue_selected = "| # MARKT                                     # |";
+		const char* markt_main_menue_not_selected = "|   markt                                       |";
 
-		const char* preise_main_menue_selected = "| # PREISE                           # |";
-		const char* preise_main_menue_not_selected = "|   preise                             |";
+		const char* preise_main_menue_selected = "| # PREISE                                    # |";
+		const char* preise_main_menue_not_selected = "|   preise                                      |";
 
-		const char* optiones_main_menue_selected = "| # OPTIONEN                         # |";
-		const char* optiones_main_menue_not_selected = "|   optionen                           |";
+		const char* optiones_main_menue_selected = "| # OPTIONEN                                  # |";
+		const char* optiones_main_menue_not_selected = "|   optionen                                    |";
 
-		const char* hilfe_main_menue_selected = "| # HILFE                            # |";
-		const char* hilfe_main_menue_not_selected = "|   hilfe                              |";
+		const char* hilfe_main_menue_selected = "| # HILFE                                     # |";
+		const char* hilfe_main_menue_not_selected = "|   hilfe                                       |";
 
-		const char* rundenende_main_menue_selected = "| # RUNDENENDE                       # |";
-		const char* rundenende_main_menue_not_selected = "|   rundenende                         |";
+		const char* rundenende_main_menue_selected = "| # RUNDENENDE                                # |";
+		const char* rundenende_main_menue_not_selected = "|   rundenende                                  |";
 	};
 	struct optiones_menue
 	{
-		const char* optiones_menue_back_selected = "| # BACK     # |";
-		const char* optiones_menue_back_not_selected = "|   back       |";
+		const char* optiones_menue_back_selected = "| # ZURUECK                                   # |";
+		const char* optiones_menue_back_not_selected = "|   zurueck                                     |";
 
-		const char* optiones_menue_exit_selected = "| # QUIT     # |";
-		const char* optiones_menue_exit_not_selected = "|   quit       |";
+		const char* optiones_menue_exit_selected = "| # QUIT                                      # |";
+		const char* optiones_menue_exit_not_selected = "|   quit                                        |";
 
-		const char* optiones_menue_load_selected = "| # LOAD     # |";
-		const char* optiones_menue_load_not_selected = "|   load       |";
+		const char* optiones_menue_load_selected = "| # LADEN                                     # |";
+		const char* optiones_menue_load_not_selected = "|   laden                                       |";
 
-		const char* optiones_menue_save_selected = "| # SAVE     # |";
-		const char* optiones_menue_save_not_selected = "|   save       |";
+		const char* optiones_menue_save_selected = "| # SPEICHERN                                 # |";
+		const char* optiones_menue_save_not_selected = "|   speichern                                   |";
 
-		const char* optiones_menue_settings_selected = "| # SETTINGS # |";
-		const char* optiones_menue_settings_not_selected = "|   settings   |";
+		const char* optiones_menue_settings_selected = "| # EINSTELLUNGEN                             # |";
+		const char* optiones_menue_settings_not_selected = "|   einstellungen                               |";
 	};
 	struct bank_menue
 	{
-		const char* bank_menue_main_bank_balance_selected = "| # KONTOSTAND                     # |";
-		const char* bank_menue_main_bank_balance_not_selected = "|   kontostand                       |";
+		const char* bank_menue_main_bank_balance_selected = "| # KONTOSTAND                                # |";
+		const char* bank_menue_main_bank_balance_not_selected = "|   kontostand                                  |";
 
-		const char* bank_menue_main_kredit_selected = "| # KREDITE                        # |";
-		const char* bank_menue_main_kredit_not_selected = "|   kredite                          |";
+		const char* bank_menue_main_börse_selected = "| # BOERSE                                    # |";
+		const char* bank_menue_main_börse_not_selected = "|   boerse                                      |";
 
-		const char* bank_menue_main_börse_selected = "| # BOERSE                         # |";
-		const char* bank_menue_main_börse_not_selected = "|   boerse                           |";
+		const char* bank_menue_main_kredit_selected = "| # KREDITE                                   # |";
+		const char* bank_menue_main_kredit_not_selected = "|   kredite                                     |";
 
-		const char* bank_menue_kredit_aufnehmen_selected = "| # AUFNEHMEN                      # |";
-		const char* bank_menue_kredit_aufnehmen_not_selected = "|   aufnehmen                        |";
+		const char* bank_menue_kredit_aufnehmen_selected = "| # AUFNEHMEN                                 # |";
+		const char* bank_menue_kredit_aufnehmen_not_selected = "|   aufnehmen                                   |";
 
-		const char* bank_menue_kredit_abzahlen_selected = "| # ABZAHLEN                       # |";
-		const char* bank_menue_kredit_abzahlen_not_selected = "|   abzahlen                         |";
+		const char* bank_menue_kredit_aufnehmen_p100_selected = "| # +100                                      # |";
+		const char* bank_menue_kredit_aufnehmen_p100_not_selected = "|   +100                                        |";
 
-		const char* bank_menue_back_selected = "| # BACK                           # |";
-		const char* bank_menue_back_not_selected = "|   back                             |";
+		const char* bank_menue_kredit_aufnehmen_p1k_selected = "| # +1000                                     # |";
+		const char* bank_menue_kredit_aufnehmen_p1k_not_selected = "|   +1000                                       |";
 
-		const char* bank_menue_exit_selected = "| # EXIT                           # |";
-		const char* bank_menue_exit_not_selected = "|   exit                             |";
+		const char* bank_menue_kredit_aufnehmen_p10k_selected = "| # +10000                                    # |";
+		const char* bank_menue_kredit_aufnehmen_p10k_not_selected = "|   +10000                                      |";
+
+		const char* bank_menue_kredit_abzahlen_selected = "| # ABZAHLEN                                  # |";
+		const char* bank_menue_kredit_abzahlen_not_selected = "|   abzahlen                                    |";
+
+		const char* bank_menue_kredit_aufnehmen_m100_selected = "| # -100                                      # |";
+		const char* bank_menue_kredit_aufnehmen_m100_not_selected = "|   -100                                        |";
+
+		const char* bank_menue_kredit_aufnehmen_m1k_selected = "| # -1000                                     # |";
+		const char* bank_menue_kredit_aufnehmen_m1k_not_selected = "|   -1000                                       |";
+
+		const char* bank_menue_kredit_aufnehmen_m10k_selected = "| # -10000                                    # |";
+		const char* bank_menue_kredit_aufnehmen_m10k_not_selected = "|   -10000                                      |";
+
+		const char* bank_menue_kredit_custom_selected = "| # CUSTOM                                    # |";
+		const char* bank_menue_kredit_custom_not_selected = "|   custom                                      |";
+
+		const char* bank_menue_accept_selected = "| # ANNEHMEN                                  # |";
+		const char* bank_menue_accept_not_selected = "|   annehmen                                    |";
+
+		const char* bank_menue_cancel_selected = "| # ABBRECHEN                                 # |";
+		const char* bank_menue_cancel_not_selected = "|   abbrechen                                   |";
+
+		const char* bank_menue_back_selected = "| # ZURUECK                                   # |";
+		const char* bank_menue_back_not_selected = "|   zurueck                                     |";
+
+		const char* bank_menue_exit_selected = "| # EXIT                                      # |";
+		const char* bank_menue_exit_not_selected = "|   exit                                        |";
 	};
 }
