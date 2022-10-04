@@ -15,7 +15,7 @@ int init()
 
 	system("cls");
 	std::cout << "### Wurstbudensimulator 5.0 ###" << std::endl << std::endl;
-#ifdef RELEASE
+#ifdef STABLE
 	std::cout << "Branch:  " << RELEASE_VERSION << std::endl;
 #else
 	std::cout << "Branch:  " << BETA_VERSION << std::endl;
@@ -24,7 +24,7 @@ int init()
 	std::cout << "Minor:   " << MINOR_VERSION << std::endl;
 	std::cout << "Release: " << RELEASE_VERSION << std::endl;
 	std::cout << "Build:   " << BUILD_VERSION << std::endl << std::endl;
-#ifdef RELEASE
+#ifdef STABLE
 	std::cout << "Version: " << STABLE_VERSION << " " << MAJOR_VERSION << "." << MINOR_VERSION << "." << RELEASE_VERSION << "." << BUILD_VERSION << std::endl << std::endl;
 #else
 	std::cout << "Version: " << BETA_VERSION << " " << MAJOR_VERSION << "." << MINOR_VERSION << "." << RELEASE_VERSION << "." << BUILD_VERSION << std::endl << std::endl;

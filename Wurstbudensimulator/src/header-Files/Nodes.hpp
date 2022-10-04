@@ -25,10 +25,10 @@ public:
 
 private:
 	int nodes = 0;
-	node* n;
-	node* t;
-	node* t2;
-	node* h;
+	node* n = NULL;
+	node* t = NULL;
+	node* t2 = NULL;
+	node* h = NULL;
 };
 
 void nodestest();

@@ -5,41 +5,6 @@ void savefileManagerTest()
 	std::cout << "SavefileManager" << std::endl;
 }
 
-int lookForSaveFile()
-{
-	std::string path;
-
-	setCursorVisibility(1);
-
-	system("cls");
-	std::cout << "Please enter the path to your Savefiles with double Backslashes(C:\\Users\\...\\playerData\\): "; 
-	getline(std::cin, path);
-
-	setCursorVisibility(0);
-
-#ifndef RELEASE
-	if (path.empty())
-	{
-		path = "C:\\Users\\offic\\OneDrive\\Desktop\\Coding\\Visual Studio\\Wurstbudensimulator\\Wurstbudensimulator\\Wurstbudensimulator\\src\\playerData\\";
-	}
-#endif
-	
-	for (const auto& i : std::filesystem::directory_iterator(path))
-	{
-
-		std::string fileName = i.path().filename().string();
-		if (fileName.find("*_saveFile_*.wsim") == std::string::npos)
-		{
-			return 1;
-		}
-		else
-		{
-			return 0;
-		}
-	}
-	return -1;
-}
-
 void playerDefaultStatsSetup(player* player)
 {
 	player->name = "default";
@@ -57,6 +22,47 @@ void playerDefaultStatsSetup(player* player)
 	player->min_aktien_req = 0.00;
 	player->aktienwert = 0.00;
 	player->aktienmarkt = 0.00;
+}
+
+int lookForSaveFile(player* player)
+{
+	std::string path;
+
+	setCursorVisibility(1);
+
+	system("cls");
+	std::cout << "Please enter the path to your Savefiles with double Backslashes(C:\\Users\\...\\playerData\\): "; 
+	getline(std::cin, path);
+
+	setCursorVisibility(0);
+
+#ifndef RELEASE
+	if (path.empty())
+	{
+		path = "C:\\Users\\offic\\OneDrive\\Desktop\\Coding\\Visual Studio\\Wurstbudensimulator\\Wurstbudensimulator\\Wurstbudensimulator\\src\\playerData\\";
+	}
+#else
+	if (path.empty())
+	{
+		playerDefaultStatsSetup(player);
+		return -1;
+	}
+#endif
+	
+	for (const auto& i : std::filesystem::directory_iterator(path))
+	{
+
+		std::string fileName = i.path().filename().string();
+		if (fileName.find("*_saveFile_*.wsim") == std::string::npos)
+		{
+			return 1;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+	return -1;
 }
 
 void showSaveFileLoadSelectorMenue(nodemanager* nodemanager, player* player)
@@ -141,7 +147,7 @@ void showSaveFileLoadMenue(nodemanager* nodemanager, player* player)
 
 void saveFileMain (player* player, nodemanager* nodemanager)
 {
-	switch (lookForSaveFile())
+	switch (lookForSaveFile(player))
 	{
 	case 0:
 	{

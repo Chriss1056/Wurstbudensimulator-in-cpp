@@ -2,6 +2,8 @@
 
 //#define RELEASE
 
+//#define STABLE
+
 #define MAJOR_VERSION			0
 #define MINOR_VERSION			8
 #define RELEASE_VERSION			578
