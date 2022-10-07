@@ -1,7 +1,7 @@
 - Implement load/save system
 - Implement settings menue
 - get folders automaticaly
-- finish bank
+- finish börse
 
 - Add Game
 
