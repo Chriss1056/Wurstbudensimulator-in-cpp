@@ -5,7 +5,6 @@ void banktest()
 	std::cout << "Bank" << std::endl;
 }
 
-//ToDo
 void kreditAufnehmen(player* player)
 {
 
@@ -13,13 +12,15 @@ void kreditAufnehmen(player* player)
 
 	int terminate, position, tick;
 
-	float tmp_kredit;
+	float tmp_kredit, tmp_money, tmp_get;
 
 	terminate = 0;
 	position = 0;
 	tick = 0;
 
-	tmp_kredit = 0.00;
+	tmp_kredit = player->kredit_raw;
+	tmp_money = player->money;
+	tmp_get = 0.00;
 
 	do
 	{
@@ -34,6 +35,40 @@ void kreditAufnehmen(player* player)
 		std::cout << "| --------------------------------------------- |" << std::endl;
 		if (position == 0)
 		{
+			std::cout << bank_menue.bank_menue_kredit_p100_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_p1k_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_p10k_not_selected << std::endl;
+		}
+		else if (position == 1)
+		{
+			std::cout << bank_menue.bank_menue_kredit_p100_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_p1k_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_p10k_not_selected << std::endl;
+		}
+		else if (position == 2)
+		{
+			std::cout << bank_menue.bank_menue_kredit_p100_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_p1k_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_p10k_selected << std::endl;
+		}
+		else
+		{
+			std::cout << bank_menue.bank_menue_kredit_p100_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_p1k_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_p10k_not_selected << std::endl;
+		}
+		std::cout << "| --------------------------------------------- |" << std::endl;
+		if (position == 3)
+		{
+			std::cout << bank_menue.bank_menue_accept_selected << std::endl;
+		}
+		else
+		{
+			std::cout << bank_menue.bank_menue_accept_not_selected << std::endl;
+		}
+		std::cout << "| --------------------------------------------- |" << std::endl;
+		if (position == 4)
+		{
 			std::cout << bank_menue.bank_menue_cancel_selected << std::endl;
 		}
 		else
@@ -43,16 +78,16 @@ void kreditAufnehmen(player* player)
 		std::cout << "*************************************************" << std::endl;
 
 		gotoxy(27, 2);
-		printf("%.2f$", player->money);
+		printf("%.2f$", tmp_money);
 		gotoxy(27, 3);
-		printf("%.2f$", player->kredit_raw);
+		printf("%.2f$", tmp_kredit);
 		gotoxy(27, 4);
 		printf("%.2f", player->zinsen - 1.00);
 		std::cout << "%";
 		gotoxy(27, 5);
-		printf("%.2f$", player->money + tmp_kredit);
+		printf("%.2f$", tmp_money + tmp_kredit);
 		gotoxy(27, 6);
-		printf("%.2f$", player->kredit_raw * player->zinsen);
+		printf("%.2f$", tmp_kredit * player->zinsen);
 
 		do
 		{
@@ -65,7 +100,7 @@ void kreditAufnehmen(player* player)
 					position--;
 					tick = 1;
 				}
-				else if ((key == DOWN_ARROW_KEY) && (position < 0))
+				else if ((key == DOWN_ARROW_KEY) && (position < 4))
 				{
 					position++;
 					tick = 1;
@@ -75,6 +110,71 @@ void kreditAufnehmen(player* player)
 					switch (position)
 					{
 					case 0:
+					{
+						tmp_money += 100;
+						tmp_kredit += 100;
+						tmp_get += 100;
+						tick = 1;
+						break;
+					}
+					case 1:
+					{
+						tmp_money += 1000;
+						tmp_kredit += 1000;
+						tmp_get += 1000;
+						tick = 1;
+						break;
+					}
+					case 2:
+					{
+						tmp_money += 10000;
+						tmp_kredit += 10000;
+						tmp_get += 10000;
+						tick = 1;
+						break;
+					}
+					case 3:
+					{
+						int validation, validation_tick;
+
+						validation = 0;
+						validation_tick = 0;
+
+						do
+						{
+							system("cls");
+
+							std::cout << "Bist du Sicher?" << std::endl;
+							std::cout << "Druecke ENTER um fortzufahren..." << std::endl;
+
+							do
+							{
+								if (_kbhit())
+								{
+									key = get_key();
+
+									if (key == ENTER_KEY)
+									{
+										system("cls");
+										player->money += tmp_get;
+										player->kredit_raw += tmp_get;
+										player->kredit = player->kredit_raw * player->zinsen;
+										validation_tick = 1;
+										validation = 1;
+									}
+									else
+									{
+										system("cls");
+										validation_tick = 1;
+										validation = 1;
+									}
+								}
+							} while (!validation_tick);
+						} while (!validation);
+						tick = 1;
+						break;
+					}
+					case 4:
 					{
 						system("cls");
 						tick = 1;
@@ -101,7 +201,6 @@ void kreditAufnehmen(player* player)
 	terminate = 0;
 }
 
-//ToDo
 void kreditAbzahlen(player* player)
 {
 
@@ -109,13 +208,15 @@ void kreditAbzahlen(player* player)
 
 	int terminate, position, tick;
 
-	float tmp_kredit;
+	float tmp_kredit, tmp_money, tmp_pay;
 
 	terminate = 0;
 	position = 0;
 	tick = 0;
 
-	tmp_kredit = 0.00;
+	tmp_kredit = player->kredit;
+	tmp_money = player->money;
+	tmp_pay = 0.00;
 
 	do
 	{
@@ -128,8 +229,42 @@ void kreditAbzahlen(player* player)
 		std::cout << "| --------------------------------------------- |" << std::endl;
 		if (position == 0)
 		{
-			std::cout << bank_menue.bank_menue_cancel_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_m100_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_m1k_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_m10k_not_selected << std::endl;
 		}
+		else if (position == 1)
+		{
+			std::cout << bank_menue.bank_menue_kredit_m100_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_m1k_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_m10k_not_selected << std::endl;
+		}
+		else if (position == 2)
+		{
+			std::cout << bank_menue.bank_menue_kredit_m100_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_m1k_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_m10k_selected << std::endl;
+		}
+		else
+		{
+			std::cout << bank_menue.bank_menue_kredit_m100_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_m1k_not_selected << std::endl;
+			std::cout << bank_menue.bank_menue_kredit_m10k_not_selected << std::endl;
+		}
+		std::cout << "| --------------------------------------------- |" << std::endl;
+		if (position == 3)
+		{
+			std::cout << bank_menue.bank_menue_accept_selected << std::endl;
+		}
+		else
+		{
+			std::cout << bank_menue.bank_menue_accept_not_selected << std::endl;
+		}
+		std::cout << "| --------------------------------------------- |" << std::endl;
+		if (position == 4)
+		{
+			std::cout << bank_menue.bank_menue_cancel_selected << std::endl;
+		} 
 		else
 		{
 			std::cout << bank_menue.bank_menue_cancel_not_selected << std::endl;
@@ -137,9 +272,9 @@ void kreditAbzahlen(player* player)
 		std::cout << "*************************************************" << std::endl;
 
 		gotoxy(27, 2);
-		printf("%.2f$", player->money);
+		printf("%.2f$", tmp_money);
 		gotoxy(27, 3);
-		printf("%.2f$", player->kredit);
+		printf("%.2f$", tmp_kredit);
 		gotoxy(27, 4);
 		printf("%.2f", player->zinsen - 1.00);
 		std::cout << "%";
@@ -155,7 +290,7 @@ void kreditAbzahlen(player* player)
 					position--;
 					tick = 1;
 				}
-				else if ((key == DOWN_ARROW_KEY) && (position < 0))
+				else if ((key == DOWN_ARROW_KEY) && (position < 4))
 				{
 					position++;
 					tick = 1;
@@ -165,6 +300,128 @@ void kreditAbzahlen(player* player)
 					switch (position)
 					{
 					case 0:
+					{
+						if ((tmp_money >= 100) && (tmp_kredit >= 100))
+						{
+							tmp_money -= 100;
+							tmp_kredit -= 100;
+							tmp_pay += 100;
+							tick = 1;
+						}
+						else if ((tmp_money >= tmp_kredit) && (tmp_kredit < 100))
+						{
+							tmp_money -= tmp_kredit;
+							tmp_pay += tmp_kredit;
+							tmp_kredit -= tmp_kredit;
+							tick = 1;
+						}
+						else
+						{
+							system("cls");
+							std::cout << "Du kannst diese Aktion nicht durchfuehren, da dir " << 100 - tmp_money << "$ fehlen." << std::endl;
+							Sleep(1000);
+							key = NULL;
+							tick = 1;
+							system("cls");
+						}
+						break;
+					}
+					case 1:
+					{
+						if ((tmp_money >= 1000) && (tmp_kredit >= 1000))
+						{
+							tmp_money -= 1000;
+							tmp_kredit -= 1000;
+							tmp_pay += 1000;
+							tick = 1;
+						}
+						else if ((tmp_money >= tmp_kredit) && (tmp_kredit < 1000))
+						{
+							tmp_money -= tmp_kredit;
+							tmp_pay += tmp_kredit;
+							tmp_kredit -= tmp_kredit;
+							tick = 1;
+						}
+						else
+						{
+							system("cls");
+							std::cout << "Du kannst diese Aktion nicht durchfuehren, da dir " << 1000 - tmp_money << "$ fehlen." << std::endl;
+							Sleep(1000);
+							key = NULL;
+							tick = 1;
+							system("cls");
+						}
+						break;
+					}
+					case 2:
+					{
+						if ((tmp_money >= 10000) && (tmp_kredit >= 10000))
+						{
+							tmp_money -= 10000;
+							tmp_kredit -= 10000;
+							tmp_pay += 10000;
+							tick = 1;
+						}
+						else if ((tmp_money >= tmp_kredit) && (tmp_kredit < 10000))
+						{
+							tmp_money -= tmp_kredit;
+							tmp_pay += tmp_kredit;
+							tmp_kredit -= tmp_kredit;
+							tick = 1;
+						}
+						else
+						{
+							system("cls");
+							std::cout << "Du kannst diese Aktion nicht durchfuehren, da dir " << 10000 - tmp_money << "$ fehlen." << std::endl;
+							Sleep(1000);
+							key = NULL;
+							tick = 1;
+							system("cls");
+						}
+						break;
+					}
+					case 3:
+					{
+						int validation, validation_tick;
+
+						validation = 0;
+						validation_tick = 0;
+
+						do
+						{
+							system("cls");
+
+							std::cout << "Bist du Sicher?" << std::endl;
+							std::cout << "Druecke ENTER um fortzufahren..." << std::endl;
+
+							do
+							{
+								if (_kbhit())
+								{
+									key = get_key();
+
+									if (key == ENTER_KEY)
+									{
+										system("cls");
+										player->money -= tmp_pay;
+										player->kredit_raw -= (tmp_pay / player->zinsen);
+										player->kredit = player->kredit_raw * player->zinsen;
+										validation_tick = 1;
+										validation = 1;
+									}
+									else
+									{
+										system("cls");
+										validation_tick = 1;
+										validation = 1;
+									}
+								}
+							} while (!validation_tick);
+						} while (!validation);
+						tick = 1;
+						break;
+					}
+					case 4:
 					{
 						system("cls");
 						tick = 1;

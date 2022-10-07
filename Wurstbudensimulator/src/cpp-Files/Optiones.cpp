@@ -101,8 +101,8 @@ int showOptionesMainMenue(player* player, nodemanager* nodemanager)
 						{
 							system("cls");
 
-							std::cout << "Are you sure?" << std::endl;
-							std::cout << "Press Enter to continue..." << std::endl;
+							std::cout << "Bist du Sicher?" << std::endl;
+							std::cout << "Druecke ENTER um fortzufahren..." << std::endl;
 
 							do
 							{

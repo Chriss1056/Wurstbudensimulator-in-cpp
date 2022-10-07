@@ -145,26 +145,26 @@ namespace menue_strings
 		const char* bank_menue_kredit_aufnehmen_selected = "| # AUFNEHMEN                                 # |";
 		const char* bank_menue_kredit_aufnehmen_not_selected = "|   aufnehmen                                   |";
 
-		const char* bank_menue_kredit_aufnehmen_p100_selected = "| # +100                                      # |";
-		const char* bank_menue_kredit_aufnehmen_p100_not_selected = "|   +100                                        |";
-
-		const char* bank_menue_kredit_aufnehmen_p1k_selected = "| # +1000                                     # |";
-		const char* bank_menue_kredit_aufnehmen_p1k_not_selected = "|   +1000                                       |";
-
-		const char* bank_menue_kredit_aufnehmen_p10k_selected = "| # +10000                                    # |";
-		const char* bank_menue_kredit_aufnehmen_p10k_not_selected = "|   +10000                                      |";
-
 		const char* bank_menue_kredit_abzahlen_selected = "| # ABZAHLEN                                  # |";
 		const char* bank_menue_kredit_abzahlen_not_selected = "|   abzahlen                                    |";
 
-		const char* bank_menue_kredit_aufnehmen_m100_selected = "| # -100                                      # |";
-		const char* bank_menue_kredit_aufnehmen_m100_not_selected = "|   -100                                        |";
+		const char* bank_menue_kredit_p100_selected = "| # +100                                      # |";
+		const char* bank_menue_kredit_p100_not_selected = "|   +100                                        |";
 
-		const char* bank_menue_kredit_aufnehmen_m1k_selected = "| # -1000                                     # |";
-		const char* bank_menue_kredit_aufnehmen_m1k_not_selected = "|   -1000                                       |";
+		const char* bank_menue_kredit_p1k_selected = "| # +1000                                     # |";
+		const char* bank_menue_kredit_p1k_not_selected = "|   +1000                                       |";
 
-		const char* bank_menue_kredit_aufnehmen_m10k_selected = "| # -10000                                    # |";
-		const char* bank_menue_kredit_aufnehmen_m10k_not_selected = "|   -10000                                      |";
+		const char* bank_menue_kredit_p10k_selected = "| # +10000                                    # |";
+		const char* bank_menue_kredit_p10k_not_selected = "|   +10000                                      |";
+
+		const char* bank_menue_kredit_m100_selected = "| # -100                                      # |";
+		const char* bank_menue_kredit_m100_not_selected = "|   -100                                        |";
+
+		const char* bank_menue_kredit_m1k_selected = "| # -1000                                     # |";
+		const char* bank_menue_kredit_m1k_not_selected = "|   -1000                                       |";
+
+		const char* bank_menue_kredit_m10k_selected = "| # -10000                                    # |";
+		const char* bank_menue_kredit_m10k_not_selected = "|   -10000                                      |";
 
 		const char* bank_menue_kredit_custom_selected = "| # CUSTOM                                    # |";
 		const char* bank_menue_kredit_custom_not_selected = "|   custom                                      |";
