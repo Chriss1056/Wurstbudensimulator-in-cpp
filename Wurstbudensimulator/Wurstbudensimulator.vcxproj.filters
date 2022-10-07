@@ -74,11 +74,19 @@
     <ClInclude Include="src\header-Files\SettingsManager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\resources\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="src\other\ToDo.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\playerData\test_saveFile_testuser.wsim" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\resources\Resources.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
