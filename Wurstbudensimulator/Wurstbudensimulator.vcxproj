@@ -160,7 +160,7 @@
     <ClCompile Include="src\cpp-Files\Bank.cpp" />
     <ClCompile Include="src\cpp-Files\Nodes.cpp" />
     <ClCompile Include="src\cpp-Files\Main.cpp" />
-    <ClCompile Include="src\cpp-Files\Markt.cpp" />
+    <ClCompile Include="src\cpp-Files\Lager.cpp" />
     <ClCompile Include="src\cpp-Files\Preise.cpp" />
     <ClCompile Include="src\cpp-Files\SavefileManager.cpp" />
     <ClCompile Include="src\cpp-Files\Optiones.cpp" />
@@ -174,7 +174,7 @@
     <ClInclude Include="src\header-Files\Preise.hpp" />
     <ClInclude Include="src\header-Files\Bank.hpp" />
     <ClInclude Include="src\header-Files\headerlib.hpp" />
-    <ClInclude Include="src\header-Files\Markt.hpp" />
+    <ClInclude Include="src\header-Files\Lager.hpp" />
     <ClInclude Include="src\header-Files\SavefileManager.hpp" />
     <ClInclude Include="src\header-Files\Optiones.hpp" />
     <ClInclude Include="src\header-Files\SettingsManager.hpp" />

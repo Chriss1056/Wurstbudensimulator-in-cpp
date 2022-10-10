@@ -94,13 +94,27 @@ void set_text_flags(console::special flag);
 
 namespace menue_strings
 {
+	struct util_menue
+	{
+		const char* util_menue_accept_selected = "| # ANNEHMEN                                  # |";
+		const char* util_menue_accept_not_selected = "|   annehmen                                    |";
+
+		const char* util_menue_cancel_selected = "| # ABBRECHEN                                 # |";
+		const char* util_menue_cancel_not_selected = "|   abbrechen                                   |";
+
+		const char* util_menue_back_selected = "| # ZURUECK                                   # |";
+		const char* util_menue_back_not_selected = "|   zurueck                                     |";
+
+		const char* util_menue_exit_selected = "| # EXIT                                      # |";
+		const char* util_menue_exit_not_selected = "|   exit                                        |";
+	};
 	struct main_menue
 	{
 		const char* bank_main_menue_selected = "| # BANK                                      # |";
 		const char* bank_main_menue_not_selected = "|   bank                                        |";
 
-		const char* markt_main_menue_selected = "| # MARKT                                     # |";
-		const char* markt_main_menue_not_selected = "|   markt                                       |";
+		const char* lager_main_menue_selected = "| # LAGER                                     # |";
+		const char* lager_main_menue_not_selected = "|   lager                                       |";
 
 		const char* preise_main_menue_selected = "| # PREISE                                    # |";
 		const char* preise_main_menue_not_selected = "|   preise                                      |";
@@ -116,9 +130,6 @@ namespace menue_strings
 	};
 	struct optiones_menue
 	{
-		const char* optiones_menue_back_selected = "| # ZURUECK                                   # |";
-		const char* optiones_menue_back_not_selected = "|   zurueck                                     |";
-
 		const char* optiones_menue_exit_selected = "| # QUIT                                      # |";
 		const char* optiones_menue_exit_not_selected = "|   quit                                        |";
 
@@ -168,17 +179,9 @@ namespace menue_strings
 
 		const char* bank_menue_kredit_custom_selected = "| # CUSTOM                                    # |";
 		const char* bank_menue_kredit_custom_not_selected = "|   custom                                      |";
-
-		const char* bank_menue_accept_selected = "| # ANNEHMEN                                  # |";
-		const char* bank_menue_accept_not_selected = "|   annehmen                                    |";
-
-		const char* bank_menue_cancel_selected = "| # ABBRECHEN                                 # |";
-		const char* bank_menue_cancel_not_selected = "|   abbrechen                                   |";
-
-		const char* bank_menue_back_selected = "| # ZURUECK                                   # |";
-		const char* bank_menue_back_not_selected = "|   zurueck                                     |";
-
-		const char* bank_menue_exit_selected = "| # EXIT                                      # |";
-		const char* bank_menue_exit_not_selected = "|   exit                                        |";
+	};
+	struct lager_menue
+	{
+		const char* lager_menue_selected = "| #                                           # |";
 	};
 }

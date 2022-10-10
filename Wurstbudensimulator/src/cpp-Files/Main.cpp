@@ -7,7 +7,7 @@ int init()
 	settingsManagerTest();
 	nodestest();
 	banktest();
-	markttest();
+	lagertest();
 	preisetest();
 	optionestest();
 	std::cout << "Hello World." << std::endl;
@@ -76,25 +76,25 @@ int main()
 		if (position == 0)
 		{
 			std::cout << main_menue.bank_main_menue_selected << std::endl;
-			std::cout << main_menue.markt_main_menue_not_selected << std::endl;
+			std::cout << main_menue.lager_main_menue_not_selected << std::endl;
 			std::cout << main_menue.preise_main_menue_not_selected << std::endl;
 		}
 		else if(position == 1)
 		{
 			std::cout << main_menue.bank_main_menue_not_selected << std::endl;
-			std::cout << main_menue.markt_main_menue_selected << std::endl;
+			std::cout << main_menue.lager_main_menue_selected << std::endl;
 			std::cout << main_menue.preise_main_menue_not_selected << std::endl;
 		}
 		else if (position == 2)
 		{
 			std::cout << main_menue.bank_main_menue_not_selected << std::endl;
-			std::cout << main_menue.markt_main_menue_not_selected << std::endl;
+			std::cout << main_menue.lager_main_menue_not_selected << std::endl;
 			std::cout << main_menue.preise_main_menue_selected << std::endl;
 		}
 		else
 		{
 			std::cout << main_menue.bank_main_menue_not_selected << std::endl;
-			std::cout << main_menue.markt_main_menue_not_selected << std::endl;
+			std::cout << main_menue.lager_main_menue_not_selected << std::endl;
 			std::cout << main_menue.preise_main_menue_not_selected << std::endl;
 		}
 		std::cout << "| --------------------------------------------- |" << std::endl;
@@ -153,6 +153,17 @@ int main()
 						tick = 1;
 						break;
 					}
+					case 1:
+					{
+						showLagerMainMenue(&player, &nodemanager);
+						tick = 1;
+						break;
+					}
+					case 2:
+					{
+						//ToDo
+						break;
+					}
 					case 3:
 					{
 						int status = showOptionesMainMenue(&player, &nodemanager);
@@ -161,6 +172,16 @@ int main()
 							terminate = 1;
 						}
 						tick = 1;
+						break;
+					}
+					case 4:
+					{
+						//ToDo
+						break;
+					}
+					case 5:
+					{
+						//ToDo
 						break;
 					}
 					default:

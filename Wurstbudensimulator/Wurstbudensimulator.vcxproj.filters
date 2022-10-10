@@ -21,7 +21,7 @@
     <ClCompile Include="src\cpp-Files\Bank.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\cpp-Files\Markt.cpp">
+    <ClCompile Include="src\cpp-Files\Lager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp-Files\Preise.cpp">
@@ -50,7 +50,7 @@
     <ClInclude Include="src\header-Files\Bank.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\header-Files\Markt.hpp">
+    <ClInclude Include="src\header-Files\Lager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\header-Files\Preise.hpp">

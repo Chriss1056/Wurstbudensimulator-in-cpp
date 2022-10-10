@@ -9,6 +9,7 @@ int showOptionesMainMenue(player* player, nodemanager* nodemanager)
 {
 
 	menue_strings::optiones_menue optiones_menue;
+	menue_strings::util_menue util_menue;
 
 	int terminate, position, tick;
 
@@ -47,20 +48,20 @@ int showOptionesMainMenue(player* player, nodemanager* nodemanager)
 		std::cout << "| --------------------------------------------- |" << std::endl;
 		if (position == 3)
 		{
-			std::cout << optiones_menue.optiones_menue_exit_selected << std::endl;
+			std::cout << util_menue.util_menue_exit_selected << std::endl;
 		}
 		else
 		{
-			std::cout << optiones_menue.optiones_menue_exit_not_selected << std::endl;
+			std::cout << util_menue.util_menue_exit_not_selected << std::endl;
 		}
 		std::cout << "| --------------------------------------------- |" << std::endl;
 		if (position == 4)
 		{
-			std::cout << optiones_menue.optiones_menue_back_selected << std::endl;
+			std::cout << util_menue.util_menue_back_selected << std::endl;
 		}
 		else
 		{
-			std::cout << optiones_menue.optiones_menue_back_not_selected << std::endl;
+			std::cout << util_menue.util_menue_back_not_selected << std::endl;
 		}
 		std::cout << "*************************************************" << std::endl;
 

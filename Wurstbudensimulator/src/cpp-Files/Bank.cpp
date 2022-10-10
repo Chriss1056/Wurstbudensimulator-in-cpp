@@ -9,6 +9,7 @@ void kreditAufnehmen(player* player)
 {
 
 	menue_strings::bank_menue bank_menue;
+	menue_strings::util_menue util_menue;
 
 	int terminate, position, tick;
 
@@ -60,20 +61,20 @@ void kreditAufnehmen(player* player)
 		std::cout << "| --------------------------------------------- |" << std::endl;
 		if (position == 3)
 		{
-			std::cout << bank_menue.bank_menue_accept_selected << std::endl;
+			std::cout << util_menue.util_menue_accept_selected << std::endl;
 		}
 		else
 		{
-			std::cout << bank_menue.bank_menue_accept_not_selected << std::endl;
+			std::cout << util_menue.util_menue_accept_not_selected << std::endl;
 		}
 		std::cout << "| --------------------------------------------- |" << std::endl;
 		if (position == 4)
 		{
-			std::cout << bank_menue.bank_menue_cancel_selected << std::endl;
+			std::cout << util_menue.util_menue_cancel_selected << std::endl;
 		}
 		else
 		{
-			std::cout << bank_menue.bank_menue_cancel_not_selected << std::endl;
+			std::cout << util_menue.util_menue_cancel_not_selected << std::endl;
 		}
 		std::cout << "*************************************************" << std::endl;
 
@@ -205,6 +206,7 @@ void kreditAbzahlen(player* player)
 {
 
 	menue_strings::bank_menue bank_menue;
+	menue_strings::util_menue util_menue;
 
 	int terminate, position, tick;
 
@@ -254,20 +256,20 @@ void kreditAbzahlen(player* player)
 		std::cout << "| --------------------------------------------- |" << std::endl;
 		if (position == 3)
 		{
-			std::cout << bank_menue.bank_menue_accept_selected << std::endl;
+			std::cout << util_menue.util_menue_accept_selected << std::endl;
 		}
 		else
 		{
-			std::cout << bank_menue.bank_menue_accept_not_selected << std::endl;
+			std::cout << util_menue.util_menue_accept_not_selected << std::endl;
 		}
 		std::cout << "| --------------------------------------------- |" << std::endl;
 		if (position == 4)
 		{
-			std::cout << bank_menue.bank_menue_cancel_selected << std::endl;
+			std::cout << util_menue.util_menue_cancel_selected << std::endl;
 		} 
 		else
 		{
-			std::cout << bank_menue.bank_menue_cancel_not_selected << std::endl;
+			std::cout << util_menue.util_menue_cancel_not_selected << std::endl;
 		}
 		std::cout << "*************************************************" << std::endl;
 
@@ -453,6 +455,7 @@ void aktienMainMenue(player* player)
 {
 	
 	menue_strings::bank_menue bank_menue;
+	menue_strings::util_menue util_menue;
 
 	int terminate, position, tick;
 
@@ -467,11 +470,11 @@ void aktienMainMenue(player* player)
 		std::cout << "*********************Boerse**********************" << std::endl;
 		if (position == 0)
 		{
-			std::cout << bank_menue.bank_menue_exit_selected << std::endl;
+			std::cout << util_menue.util_menue_exit_selected << std::endl;
 		}
 		else
 		{
-			std::cout << bank_menue.bank_menue_exit_not_selected << std::endl;
+			std::cout << util_menue.util_menue_exit_not_selected << std::endl;
 		}
 		std::cout << "*************************************************" << std::endl;
 
@@ -528,6 +531,7 @@ void kreditMainMenue(player* player)
 {
 
 	menue_strings::bank_menue bank_menue;
+	menue_strings::util_menue util_menue;
 
 	int terminate, position, tick;
 
@@ -563,11 +567,11 @@ void kreditMainMenue(player* player)
 		std::cout << "| --------------------------------------------- |" << std::endl;
 		if (position == 2)
 		{
-			std::cout << bank_menue.bank_menue_back_selected << std::endl;
+			std::cout << util_menue.util_menue_back_selected << std::endl;
 		}
 		else
 		{
-			std::cout << bank_menue.bank_menue_back_not_selected << std::endl;
+			std::cout << util_menue.util_menue_back_not_selected << std::endl;
 		}
 		std::cout << "*************************************************" << std::endl;
 
@@ -644,6 +648,7 @@ void bankBalanceMainMenue(player* player)
 {
 
 	menue_strings::bank_menue bank_menue;
+	menue_strings::util_menue util_menue;
 
 	int terminate, tick;
 
@@ -667,7 +672,7 @@ void bankBalanceMainMenue(player* player)
 		std::cout << "| Umsatz Taeglich:                              |" << std::endl;
 		std::cout << "| Umsatz Gesamt:                                |" << std::endl;
 		std::cout << "| --------------------------------------------- |" << std::endl;
-		std::cout << bank_menue.bank_menue_back_selected << std::endl;
+		std::cout << util_menue.util_menue_back_selected << std::endl;
 		std::cout << "*************************************************" << std::endl;
 
 		gotoxy(23, 2);
@@ -739,6 +744,7 @@ void showBankMainMenue(player* player)
 {
 
 	menue_strings::bank_menue bank_menue;
+	menue_strings::util_menue util_menue;
 
 	int terminate, position, tick;
 
@@ -782,11 +788,11 @@ void showBankMainMenue(player* player)
 		std::cout << "| --------------------------------------------- |" << std::endl;
 		if (position == 3)
 		{
-			std::cout << bank_menue.bank_menue_exit_selected << std::endl;
+			std::cout << util_menue.util_menue_exit_selected << std::endl;
 		}
 		else
 		{
-			std::cout << bank_menue.bank_menue_exit_not_selected << std::endl;
+			std::cout << util_menue.util_menue_exit_not_selected << std::endl;
 		}
 		std::cout << "*************************************************" << std::endl;
 
