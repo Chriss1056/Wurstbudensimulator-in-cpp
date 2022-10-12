@@ -24,6 +24,14 @@ void playerDefaultStatsSetup(player* player)
 	player->aktienmarkt = 0.00;
 }
 
+void nodesDefaultSetup(nodemanager* nodemanager)
+{
+	nodemanager->createNode("Coca Cola");
+	nodemanager->createNode("Fanta");
+	nodemanager->createNode("Semmel");
+	nodemanager->createNode("Wurst");
+}
+
 int lookForSaveFile(player* player)
 {
 	std::string path;
@@ -69,6 +77,7 @@ void showSaveFileLoadSelectorMenue(nodemanager* nodemanager, player* player)
 {
 	//ToDo
 	playerDefaultStatsSetup(player);
+	nodesDefaultSetup(nodemanager);
 }
 
 void showSaveFileLoadMenue(nodemanager* nodemanager, player* player)
@@ -131,6 +140,7 @@ void showSaveFileLoadMenue(nodemanager* nodemanager, player* player)
 					resume = 1;
 					tick = 1;
 					playerDefaultStatsSetup(player);
+					nodesDefaultSetup(nodemanager);
 				}
 				else if((key == ENTER_KEY) && (position == 0))
 				{
@@ -152,6 +162,7 @@ void saveFileMain (player* player, nodemanager* nodemanager)
 	case 0:
 	{
 		playerDefaultStatsSetup(player);
+		nodesDefaultSetup(nodemanager);
 		break;
 	}
 	case 1:

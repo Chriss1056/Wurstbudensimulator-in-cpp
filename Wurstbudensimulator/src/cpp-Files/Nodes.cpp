@@ -5,9 +5,33 @@ void nodestest()
 	std::cout << "Nodes" << std::endl;
 }
 
+//ToDo
+void nodemanager::reindexAll()
+{
+	int index, finished;
+	finished = 0;
+	i = h;
+	index = i->index;
+	while (!finished)
+	{
+		if (i->next != NULL)
+		{
+			index++;
+			i = i->next;
+			i->index = index;
+		}
+		else
+		{
+			finished = 1;
+		}
+	}
+}
+
 void nodemanager::initNodes()
 {
 	n = new node;
+	n->name = "head";
+	n->index = 0;
 	n->bevore = h;
 	t = n;
 	h = n;
@@ -22,6 +46,7 @@ void nodemanager::createNode(const char* name)
 	t->next = n;
 	t = t->next;
 	nodes++;
+	reindexAll();
 }
 
 void nodemanager::removeNode(const char* name)
@@ -45,9 +70,10 @@ void nodemanager::removeNode(const char* name)
 	t->bevore = t2;
 	delete(fordeletion);
 	nodes--;
+	reindexAll();
 }
 
-void nodemanager::getNodeByName(const char* name, node* node)
+node* nodemanager::getNodeByName(const char* name)
 {
 	int found = 0;
 	t = h;
@@ -57,13 +83,14 @@ void nodemanager::getNodeByName(const char* name, node* node)
 		if (t == n->next)
 		{
 			std::cerr << "Node <" << name << "> not found!" << std::endl;
-			return;
+			return NULL;
 		}
 		else if (t->name == name)
 		{
 			found = 1;
 		}
 	} while (!found);
+	return t;
 }
 
 void nodemanager::saveNodesToFile(const char* filename)

@@ -60,6 +60,7 @@ int main()
 	nodemanager nodemanager;
 	menue_strings::main_menue main_menue;
 
+	nodemanager.initNodes();
 	saveFileMain(&player, &nodemanager);
 
 	int terminate, position, tick;
