@@ -16,20 +16,15 @@ void showLagerMainMenue(player* player, nodemanager* nodemanager)
 	tick = 0;
 	position = 0;
 
-	node* test1 = nodemanager->getNodeByName("Fanta");
-	node* test2 = nodemanager->getNodeByName("Coca Cola");
-	node* test3 = nodemanager->getNodeByName("Wurst");
-	node* test4 = nodemanager->getNodeByName("Semmel");
+	node** test1 = nullptr;
+	nodemanager->getNodeByName("Fanta", test1);
 
 	do
 	{
 		system("cls");
 
 		std::cout << "*******************Lager*Menue*******************" << std::endl;
-		std::cout << test1->index << std::endl;
-		std::cout << test2->index << std::endl;
-		std::cout << test3->index << std::endl;
-		std::cout << test4->index << std::endl;
+		std::cout << (*test1)->index << std::endl;
 		std::cout << "-------------------------------------------------" << std::endl;
 		if (position == 0)
 		{
