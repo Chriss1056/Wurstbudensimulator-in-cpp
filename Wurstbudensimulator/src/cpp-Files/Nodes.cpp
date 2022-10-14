@@ -5,7 +5,6 @@ void nodestest()
 	std::cout << "Nodes" << std::endl;
 }
 
-//ToDo
 void nodemanager::reindexAll()
 {
 	int index, finished;
@@ -19,8 +18,6 @@ void nodemanager::reindexAll()
 			index++;
 			i = i->next;
 			i->index = index;
-			std::cout << i->index << std::endl;
-			std::cin.get();
 		}
 		else
 		{
@@ -38,6 +35,11 @@ void nodemanager::initNodes()
 	t = n;
 	h = n;
 	nodes++;
+}
+
+int nodemanager::getNodesCount()
+{
+	return nodes;
 }
 
 void nodemanager::createNode(const char* name)
@@ -76,7 +78,7 @@ void nodemanager::removeNode(const char* name)
 	reindexAll();
 }
 
-void nodemanager::getNodeByName(const char* name, node** ptr)
+node* nodemanager::getNodeByName(const char* name)
 {
 	int found = 0;
 	t = h;
@@ -86,14 +88,34 @@ void nodemanager::getNodeByName(const char* name, node** ptr)
 		if (t == n->next)
 		{
 			std::cerr << "Node <" << name << "> not found!" << std::endl;
-			return;
+			return NULL;
 		}
 		else if (t->name == name)
 		{
 			found = 1;
 		}
 	} while (!found);
-	ptr = &t;
+	return t;
+}
+
+node* nodemanager::getNodeByIndex(int index)
+{
+	int found = 0;
+	t = h;
+	do
+	{
+		t = t->next;
+		if (t == n->next)
+		{
+			std::cerr << "Node <" << index << "> not found!" << std::endl;
+			return NULL;
+		}
+		else if (t->index == index)
+		{
+			found = 1;
+		}
+	} while (!found);
+	return t;
 }
 
 void nodemanager::saveNodesToFile(const char* filename)

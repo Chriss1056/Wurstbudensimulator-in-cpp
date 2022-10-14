@@ -19,11 +19,13 @@ public:
 
 	void createNode(const char* name);
 	void removeNode(const char* name);
-	void getNodeByName(const char* name, node** ptr);
-	void getNodeByIndex(const char* name, node* ptr);
+	node* getNodeByName(const char* name);
+	node* getNodeByIndex(int index);
 
 	void saveNodesToFile(const char* filename);
 	void loadNodesFromFile(const char* filename);
+
+	int getNodesCount();
 
 private:
 	int nodes = 0;

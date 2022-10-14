@@ -35,11 +35,11 @@ void set_text_flags(console::special flag)
 
 void gotoxy(short x, short y)
 {
-	HANDLE hCon = GetStdHandle(STD_OUTPUT_HANDLE);
-	COORD pos;
-	pos.X = x - 1;
-	pos.Y = y - 1;
-	SetConsoleCursorPosition(hCon, pos);
+	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+	COORD position;
+	position.X = x - 1;
+	position.Y = y - 1;
+	SetConsoleCursorPosition(handle, position);
 }
 
 void setCursorVisibility(int show)

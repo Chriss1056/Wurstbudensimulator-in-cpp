@@ -16,15 +16,28 @@ void showLagerMainMenue(player* player, nodemanager* nodemanager)
 	tick = 0;
 	position = 0;
 
-	node** test1 = nullptr;
-	nodemanager->getNodeByName("Fanta", test1);
+	node* test1 = nullptr;
+	
+	test1 = nodemanager->getNodeByIndex(1);
 
 	do
 	{
 		system("cls");
 
 		std::cout << "*******************Lager*Menue*******************" << std::endl;
-		std::cout << (*test1)->index << std::endl;
+		std::cout << "|     Name     |  auf Lager  |  ekp   |  vkp    |" << std::endl;
+		std::cout << "|--------------|-------------|--------|---------|" << std::endl;
+		for (int i = 0; i < nodemanager->getNodesCount(); i++)
+		{
+			if (i % 2)
+			{
+				std::cout << "|              |             |        |         |" << std::endl;
+			}
+			else
+			{
+				std::cout << "|              |             |        |         |" << std::endl;
+			}
+		}
 		std::cout << "-------------------------------------------------" << std::endl;
 		if (position == 0)
 		{
@@ -47,7 +60,7 @@ void showLagerMainMenue(player* player, nodemanager* nodemanager)
 					position--;
 					tick = 1;
 				}
-				else if ((key == DOWN_ARROW_KEY) && (position < 0))
+				else if ((key == DOWN_ARROW_KEY) && (position < 1))
 				{
 					position++;
 					tick = 1;
