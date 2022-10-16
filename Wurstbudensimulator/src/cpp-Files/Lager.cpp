@@ -16,9 +16,8 @@ void showLagerMainMenue(player* player, nodemanager* nodemanager)
 	tick = 0;
 	position = 0;
 
-	node* test1 = nullptr;
+	node* var = nullptr;
 	
-	test1 = nodemanager->getNodeByIndex(1);
 
 	do
 	{
@@ -26,19 +25,22 @@ void showLagerMainMenue(player* player, nodemanager* nodemanager)
 
 		std::cout << "*******************Lager*Menue*******************" << std::endl;
 		std::cout << "|     Name     |  auf Lager  |  ekp   |  vkp    |" << std::endl;
-		std::cout << "|--------------|-------------|--------|---------|" << std::endl;
-		for (int i = 0; i < nodemanager->getNodesCount(); i++)
+		std::cout << "| ------------ | ----------- | ------ | ------- |" << std::endl;
+		for (int i = 1; i < nodemanager->getNodesCount(); i++)
 		{
-			if (i % 2)
-			{
-				std::cout << "|              |             |        |         |" << std::endl;
-			}
-			else
-			{
-				std::cout << "|              |             |        |         |" << std::endl;
-			}
+			var = nodemanager->getNodeByIndex(i);
+			gotoxy(1, (i + 3));
+			std::cout << "|              |             |        |         |";
+			gotoxy(2, (i + 3));
+			printf("%s", var->name);
+			gotoxy(17, (i + 3));
+			printf("%d", var->inStock);
+			gotoxy(31, (i + 3));
+			printf("%.2f", var->ekp);
+			gotoxy(40, (i + 3));
+			printf("%.2f", var->vkp);
 		}
-		std::cout << "-------------------------------------------------" << std::endl;
+		std::cout << std::endl << "|-----------------------------------------------|" << std::endl;
 		if (position == 0)
 		{
 			std::cout << util_menue.util_menue_exit_selected << std::endl;

@@ -30,6 +30,13 @@ void nodesDefaultSetup(nodemanager* nodemanager)
 	nodemanager->createNode("Fanta");
 	nodemanager->createNode("Semmel");
 	nodemanager->createNode("Wurst");
+	for (int i = 1; i <= 4; i++)
+	{
+		node* var = nodemanager->getNodeByIndex(i);
+		var->inStock = 0;
+		var->ekp = 0.00f;
+		var->vkp = 0.00f;
+	}
 }
 
 int lookForSaveFile(player* player)
