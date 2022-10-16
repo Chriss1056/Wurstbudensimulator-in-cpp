@@ -17,6 +17,7 @@
 #include "Nodes.hpp"
 #include "Bank.hpp"
 #include "Lager.hpp"
+#include "Markt.hpp"
 #include "Preise.hpp"
 #include "Optiones.hpp"
 #include "Main.hpp"

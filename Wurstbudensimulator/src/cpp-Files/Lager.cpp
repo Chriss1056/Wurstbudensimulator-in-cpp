@@ -2,7 +2,7 @@
 
 void lagertest()
 {
-	std::cout << "Markt" << std::endl;
+	std::cout << "Lager" << std::endl;
 }
 
 void showLagerMainMenue(player* player, nodemanager* nodemanager)
@@ -31,17 +31,26 @@ void showLagerMainMenue(player* player, nodemanager* nodemanager)
 			var = nodemanager->getNodeByIndex(i);
 			gotoxy(1, (i + 3));
 			std::cout << "|              |             |        |         |";
-			gotoxy(2, (i + 3));
+			gotoxy(3, (i + 3));
 			printf("%s", var->name);
-			gotoxy(17, (i + 3));
+			gotoxy(18, (i + 3));
 			printf("%d", var->inStock);
-			gotoxy(31, (i + 3));
+			gotoxy(32, (i + 3));
 			printf("%.2f", var->ekp);
-			gotoxy(40, (i + 3));
+			gotoxy(41, (i + 3));
 			printf("%.2f", var->vkp);
 		}
-		std::cout << std::endl << "|-----------------------------------------------|" << std::endl;
+		std::cout << std::endl << "| --------------------------------------------- |" << std::endl;
 		if (position == 0)
+		{
+			std::cout << lager_menue.lager_menue_markt_selected << std::endl;
+		}
+		else
+		{
+			std::cout << lager_menue.lager_menue_markt_not_selected << std::endl;
+		}
+		std::cout << "| --------------------------------------------- |" << std::endl;
+		if (position == 1)
 		{
 			std::cout << util_menue.util_menue_exit_selected << std::endl;
 		}
@@ -72,6 +81,12 @@ void showLagerMainMenue(player* player, nodemanager* nodemanager)
 					switch (position)
 					{
 					case 0:
+					{
+						showMarktMainMenue(player, nodemanager);
+						tick = 1;
+						break;
+					}
+					case 1:
 					{
 						system("cls");
 						tick = 1;

@@ -158,6 +158,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\cpp-Files\Bank.cpp" />
+    <ClCompile Include="src\cpp-Files\Markt.cpp" />
     <ClCompile Include="src\cpp-Files\Nodes.cpp" />
     <ClCompile Include="src\cpp-Files\Main.cpp" />
     <ClCompile Include="src\cpp-Files\Lager.cpp" />
@@ -168,6 +169,7 @@
     <ClCompile Include="src\cpp-Files\Utillity.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\header-Files\Markt.hpp" />
     <ClInclude Include="src\resources\resource.h" />
     <ClInclude Include="src\header-Files\Nodes.hpp" />
     <ClInclude Include="src\header-Files\Main.hpp" />

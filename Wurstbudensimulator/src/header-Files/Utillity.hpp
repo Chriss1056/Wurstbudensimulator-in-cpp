@@ -182,6 +182,12 @@ namespace menue_strings
 	};
 	struct lager_menue
 	{
-		const char* lager_menue_selected = "| #                                           # |";
+		const char* lager_menue_markt_selected = "| # MARKT                                     # |";
+		const char* lager_menue_markt_not_selected = "|   markt                                       |";
+	};
+	struct markt_menue
+	{
+		const char* markt_menue_selected = "| #                                           # |";
+		const char* markt_menue_not_selected = "| #                                           # |";
 	};
 }
