@@ -19,6 +19,7 @@ struct player
 	float min_aktien_req;
 	float aktienwert;
 	float aktienmarkt;
+	int vernichtet;
 };
 
 constexpr auto UP_ARROW_KEY = 296;
