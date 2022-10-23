@@ -18,7 +18,6 @@ void showLagerMainMenue(player* player, nodemanager* nodemanager)
 
 	node* var = nullptr;
 	
-
 	do
 	{
 		system("cls");
