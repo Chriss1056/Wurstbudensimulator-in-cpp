@@ -1,6 +1,6 @@
 #pragma once
 
-#define RELEASE
+//#define RELEASE
 
 //#define STABLE
 
