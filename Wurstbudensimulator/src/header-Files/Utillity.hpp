@@ -19,6 +19,7 @@ struct player
 	float min_aktien_req;
 	float aktienwert;
 	float aktienmarkt;
+	int level;
 	int vernichtet;
 };
 
@@ -188,7 +189,16 @@ namespace menue_strings
 	};
 	struct markt_menue
 	{
-		const char* markt_menue_selected = "| #                                           # |";
-		const char* markt_menue_not_selected = "| #                                           # |";
+		const char* markt_menue_l0_weizen_selected = "| # WEIZEN                                    # |";
+		const char* markt_menue_l0_weizen_not_selected = "|   weizen                                      |";
+
+		const char* markt_menue_l0_mehl_selected = "| # MEHL                                      # |";
+		const char* markt_menue_l0_mehl_not_selected = "|   mehl                                        |";
+
+		const char* markt_menue_l0_semmel_gewuerze_selected = "| # SEMMEL GEWUERZE                           # |";
+		const char* markt_menue_l0_semmel_gewuerze_not_selected = "|   semmel gewuerze                             |";
+
+		const char* markt_menue_l0_selected = "| #                                           # |";
+		const char* markt_menue_l0_not_selected = "|                                               |";
 	};
 }

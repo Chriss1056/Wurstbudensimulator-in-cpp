@@ -11,18 +11,22 @@ void showMarktMainMenue(player* player, nodemanager* nodemanager)
 	menue_strings::util_menue util_menue;
 	menue_strings::markt_menue markt_menue;
 
-	int terminate, tick, position;
+	int terminate, tick, position, level;
 
 	terminate = 0;
 	tick = 0;
 	position = 0;
+	level = player->level;
 
 	do
 	{
 		system("cls");
-
-		std::cout << "Der Markt ist derzeit geschlossen." << std::endl;
-		std::cout << "Druecke ENTER um zum Lager zurueckzukehren..." << std::endl;
+		std::cout << "**********************MARKT**********************" << std::endl;
+		std::cout << "" << std::endl;
+		std::cout << "| --------------------------------------------- |" << std::endl;
+		std::cout << "| Der Markt ist derzeit geschlossen.            |" << std::endl;
+		std::cout << "| Druecke ENTER um zum Lager zurueckzukehren... |" << std::endl;
+		std::cout << "*************************************************" << std::endl;
 
 		do
 		{

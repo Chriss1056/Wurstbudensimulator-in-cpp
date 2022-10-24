@@ -22,6 +22,8 @@ void playerDefaultStatsSetup(player* player)
 	player->min_aktien_req = 0.00;
 	player->aktienwert = 0.00;
 	player->aktienmarkt = 0.00;
+	player->level = 0;
+	player->vernichtet = 0;
 }
 
 void nodesDefaultSetup(nodemanager* nodemanager)
