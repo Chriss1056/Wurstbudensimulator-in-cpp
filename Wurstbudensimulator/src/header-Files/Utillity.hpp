@@ -178,9 +178,6 @@ namespace menue_strings
 
 		const char* bank_menue_kredit_m10k_selected = "| # -10000                                    # |";
 		const char* bank_menue_kredit_m10k_not_selected = "|   -10000                                      |";
-
-		const char* bank_menue_kredit_custom_selected = "| # CUSTOM                                    # |";
-		const char* bank_menue_kredit_custom_not_selected = "|   custom                                      |";
 	};
 	struct lager_menue
 	{
