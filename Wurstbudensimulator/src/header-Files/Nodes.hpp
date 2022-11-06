@@ -18,7 +18,8 @@ public:
 	void initNodes();
 
 	void createNode(const char* name);
-	void removeNode(const char* name);
+	void removeNodeByName(const char* name);
+	void removeNodeByIndex(int index);
 	node* getNodeByName(const char* name);
 	node* getNodeByIndex(int index);
 
@@ -31,9 +32,7 @@ private:
 	int nodes = 0;
 	node* n = NULL;
 	node* t = NULL;
-	node* t2 = NULL;
 	node* h = NULL;
-	node* i = NULL;
 	void reindexAll();
 };
 

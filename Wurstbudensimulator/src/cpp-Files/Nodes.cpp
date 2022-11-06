@@ -5,8 +5,10 @@ void nodestest()
 	std::cout << "Nodes" << std::endl;
 }
 
+//ToDo
 void nodemanager::reindexAll()
 {
+	node* i = NULL;
 	int index, finished;
 	finished = 0;
 	i = h;
@@ -17,13 +19,17 @@ void nodemanager::reindexAll()
 		{
 			index++;
 			i = i->next;
+			/*Very Unstable*/
 			i->index = index;
+			/*Very Unstable*/
 		}
 		else
 		{
 			finished = 1;
 		}
+		std::cout << index << std::endl;
 	}
+	free(i);
 }
 
 void nodemanager::initNodes()
@@ -54,14 +60,20 @@ void nodemanager::createNode(const char* name)
 	reindexAll();
 }
 
-void nodemanager::removeNode(const char* name)
+void nodemanager::removeNodeByName(const char* name)
 {
 	node* fordeletion;
+	node* t2 = NULL;
 	int found = 0;
 	t = h;
 	do
 	{
 		t = t->next;
+		if (t == n->next)
+		{
+			t = NULL;
+			return;
+		}
 		if (t->name == name)
 		{
 			found = 1;
@@ -74,6 +86,38 @@ void nodemanager::removeNode(const char* name)
 	t2->next = t;
 	t->bevore = t2;
 	delete(fordeletion);
+	free(t2);
+	nodes--;
+	reindexAll();
+}
+
+void nodemanager::removeNodeByIndex(int index)
+{
+	node* fordeletion;
+	node* t2 = NULL;
+	int found = 0;
+	t = h;
+	do
+	{
+		t = t->next;
+		if (t == n->next)
+		{
+			t = NULL;
+			return;
+		}
+		if (t->index == index)
+		{
+			found = 1;
+		}
+	} while (!found);
+	t2 = t;
+	fordeletion = t;
+	t2 = t2->bevore;
+	t = t->next;
+	t2->next = t;
+	t->bevore = t2;
+	delete(fordeletion);
+	free(t2);
 	nodes--;
 	reindexAll();
 }
@@ -120,10 +164,10 @@ node* nodemanager::getNodeByIndex(int index)
 
 void nodemanager::saveNodesToFile(const char* filename)
 {
-	std::cout << "Not jet Implemented." << std::endl;
+	//ToDo
 }
 
 void nodemanager::loadNodesFromFile(const char* filename)
 {
-	std::cout << "Not jet Implemented." << std::endl;
+	//ToDo
 }

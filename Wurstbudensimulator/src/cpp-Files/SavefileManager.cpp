@@ -35,10 +35,16 @@ void nodesDefaultSetup(nodemanager* nodemanager)
 	for (int i = 1; i <= 4; i++)
 	{
 		node* var = nodemanager->getNodeByIndex(i);
+		if (var == NULL)
+		{
+			break;
+		}
 		var->inStock = 0;
 		var->ekp = 0.00f;
 		var->vkp = 0.00f;
+		free(&var);
 	}
+	nodemanager->removeNodeByName("Fanta");
 }
 
 int lookForSaveFile(player* player)
