@@ -42,9 +42,7 @@ void nodesDefaultSetup(nodemanager* nodemanager)
 		var->inStock = 0;
 		var->ekp = 0.00f;
 		var->vkp = 0.00f;
-		free(&var);
 	}
-	nodemanager->removeNodeByName("Fanta");
 }
 
 int lookForSaveFile(player* player)

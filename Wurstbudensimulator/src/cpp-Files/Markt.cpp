@@ -22,7 +22,7 @@ void showMarktMainMenue(player* player, nodemanager* nodemanager)
 	{
 		system("cls");
 		std::cout << "**********************MARKT**********************" << std::endl;
-		std::cout << "" << std::endl;
+		std::cout << util_menue.util_menue_back_selected << std::endl;
 		std::cout << "| --------------------------------------------- |" << std::endl;
 		std::cout << "| Der Markt ist derzeit geschlossen.            |" << std::endl;
 		std::cout << "| Druecke ENTER um zum Lager zurueckzukehren... |" << std::endl;

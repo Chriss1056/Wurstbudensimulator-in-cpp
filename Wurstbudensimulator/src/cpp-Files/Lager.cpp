@@ -29,7 +29,9 @@ void showLagerMainMenue(player* player, nodemanager* nodemanager)
 		{
 			var = nodemanager->getNodeByIndex(i);
 			gotoxy(1, (i + 3));
-			std::cout << "|              |             |        |         |";
+			std::cout << "               |             |        |         |";
+			gotoxy(1, (i + 3));
+			printf("%d", var->index);
 			gotoxy(3, (i + 3));
 			printf("%s", var->name);
 			gotoxy(18, (i + 3));

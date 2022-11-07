@@ -13,23 +13,19 @@ void nodemanager::reindexAll()
 	finished = 0;
 	i = h;
 	index = 0;
-	while (!finished)
+	while (1)
 	{
-		if (i->index != nodes-1)
+		if (i->index != nodes - 1)
 		{
 			index++;
 			i = i->next;
-			/*Very Unstable*/
 			i->index = index;
-			/*Very Unstable*/
 		}
 		else
 		{
-			finished = 1;
+			return;
 		}
-		std::cout << index << std::endl;
 	}
-	free(i);
 }
 
 void nodemanager::initNodes()
@@ -86,7 +82,6 @@ void nodemanager::removeNodeByName(const char* name)
 	t2->next = t;
 	t->bevore = t2;
 	delete(fordeletion);
-	free(t2);
 	nodes--;
 	reindexAll();
 }
@@ -117,7 +112,6 @@ void nodemanager::removeNodeByIndex(int index)
 	t2->next = t;
 	t->bevore = t2;
 	delete(fordeletion);
-	free(t2);
 	nodes--;
 	reindexAll();
 }
